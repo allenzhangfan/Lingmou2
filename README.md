@@ -41,7 +41,7 @@
 
 
 ## Notice
-
+* Lingmou2依赖Common2
 * [MVPArms Learning Project](https://github.com/JessYanCoding/MVPArms/blob/master/CONTRIBUTING_APP.md)
 
 * [Collection Box](https://github.com/JessYanCoding/MVPArms/issues/40)
