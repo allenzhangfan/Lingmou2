@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:paddingBottom="@dimen/dp8"
+    >
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/item_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="150dip"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="@dimen/dp2"
+        >
+
+        <ImageView
+            android:id="@+id/face_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            />
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp4"
+        android:layout_marginTop="@dimen/dp8"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        android:text="丽水嘉园"
+        android:textColor="@color/detail_title"
+        android:textSize="@dimen/sp15"
+        />
+
+    <TextView
+        android:id="@+id/date_time_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp4"
+        android:layout_marginTop="@dimen/dp4"
+        android:textColor="@color/gray_777"
+        android:textSize="@dimen/sp14"
+        />
+
+</LinearLayout>

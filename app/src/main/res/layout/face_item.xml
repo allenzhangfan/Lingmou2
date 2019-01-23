@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/img_parent_rl"
+        android:layout_width="match_parent"
+        android:layout_height="100dip"
+        android:layout_marginTop="15dip">
+
+        <cloud.antelope.lingmou.mvp.ui.widget.RectImageView
+            android:id="@+id/face_civ"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+             />
+        <TextView
+            android:id="@+id/score_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp4"
+            android:layout_marginLeft="@dimen/dp4"
+            android:paddingLeft="@dimen/dp4"
+            android:paddingRight="@dimen/dp4"
+            android:textSize="@dimen/sp12"
+            android:textColor="@color/white"
+            android:background="@drawable/face_recog_tv_bg"
+            android:text="80%"
+            />
+        <ImageView
+            android:id="@+id/item_select_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/selector_recog_select"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="@dimen/dp6"
+            android:layout_marginTop="@dimen/dp6"
+            android:visibility="visible"
+            />
+
+        <View
+            android:id="@+id/no_lat_lng_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/eighty_transparent_white"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/face_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dip"
+        android:text="- -"
+        android:visibility="visible"
+        android:singleLine="true"
+        android:ellipsize="middle"
+        android:textColor="@color/default_text_color"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/face_time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="8dip"
+        android:textColor="@color/color_gray"
+        android:textSize="12sp" />
+</LinearLayout>

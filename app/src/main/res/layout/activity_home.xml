@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/home_content_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:clipChildren="false"
+        android:orientation="vertical">
+
+        <cloud.antelope.lingmou.mvp.ui.widget.CustomViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            android:scrollbars="none" />
+
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:background="@color/mine_divider_line_color" />
+
+        <LinearLayout
+            android:id="@+id/bottom_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:clipChildren="false"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="3dip">
+
+            <TextView
+                android:id="@+id/home_video_tv"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/home_cloud_video_selector"
+                android:gravity="center"
+                android:text="云视"
+                android:textColor="@color/home_text_selector"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/home_map_tv"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/home_cloud_map_selector"
+                android:gravity="center"
+                android:text="云图"
+                android:textColor="@color/home_text_selector"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/home_app_tv"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/home_cloud_app_selector"
+                android:gravity="center"
+                android:text="云服"
+                android:textColor="@color/home_text_selector"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/home_person_tv"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/home_cloud_user_selector"
+                android:gravity="center"
+                android:text="我的"
+                android:textColor="@color/home_text_selector"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:id="@+id/view_bar"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="0dp"/>
+        <include layout="@layout/include_head_item" />
+    </LinearLayout>
+
+    <include
+        android:visibility="visible"
+        android:id="@+id/include_resources"
+        layout="@layout/include_my_resources" />
+
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp16"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp16"
+        android:gravity="center_vertical">
+
+
+        <TextView
+            android:id="@+id/daily_device_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="设备"
+            android:textColor="@color/selector_daily_title"
+            android:textSize="@dimen/sp22"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/daily_police_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp16"
+            android:gravity="center"
+            android:text="告警"
+            android:textColor="@color/selector_daily_title"
+            android:textSize="@dimen/sp17"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!--<cloud.antelope.lingmou.mvp.ui.widget.IndicatorView
+        android:id="@+id/indicatorView"
+        android:layout_width="114dp"
+        android:layout_height="3dp"
+        android:layout_gravity="center_horizontal"
+        app:line_color="@color/yellow_ff8f00"
+        app:gap_width="44dp"
+        app:single_width="24dp" />-->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+</LinearLayout>

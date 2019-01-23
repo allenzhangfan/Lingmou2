@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_root"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp104"
+        android:background="@color/white">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv"
+            android:layout_width="@dimen/dp128"
+            android:layout_height="@dimen/dp72"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp16"
+            app:cardCornerRadius="@dimen/dp2"
+            app:cardElevation="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp40"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/cloud_step_collect_item_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/dp4"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:id="@+id/view_state"
+                        android:layout_width="@dimen/dp6"
+                        android:layout_height="@dimen/dp6"
+                        android:layout_margin="@dimen/dp4"
+                        android:background="@drawable/shape_oval_red" />
+
+                    <TextView
+                        android:id="@+id/tv_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp11"
+                        tools:text="在线" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/play_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:id="@+id/offline_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_eeeeee"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawablePadding="@dimen/dp10"
+                        android:drawableTop="@drawable/camera_offline"
+                        android:gravity="center"
+                        android:text="当前设备离线" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_marginRight="@dimen/dp16"
+            android:layout_marginTop="@dimen/dp18"
+            android:layout_toRightOf="@+id/cv"
+            android:ellipsize="end"
+            android:lines="2"
+            android:textColor="@color/gray_424242"
+            android:textSize="@dimen/sp15"
+            tools:text="关山大道保利国际中心15F B区办公区" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/cv"
+            android:layout_marginBottom="@dimen/dp8"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_marginTop="@dimen/dp18"
+            android:layout_toLeftOf="@+id/iv_menu"
+            android:layout_toRightOf="@+id/cv"
+            android:ellipsize="start"
+            android:singleLine="true"
+            android:textColor="@color/gray_9e9e9e"
+            android:textSize="@dimen/sp13"
+            tools:text="关山大道保利国际中心15F B区办公区" />
+
+        <ImageView
+            android:id="@+id/iv_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/dp16"
+            android:src="@drawable/menu" />
+
+        <View
+            android:id="@+id/view_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_marginRight="@dimen/dp16"
+            android:background="@color/comment_divide_line_color" />
+    </RelativeLayout>
+</LinearLayout>
+<!--<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp94"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_pic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/tv_state"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/cloud_step_collect_item_bg"
+                android:gravity="bottom"
+                android:paddingBottom="@dimen/dp4"
+                android:paddingLeft="@dimen/dp4"
+                android:text="在线"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp12" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp4"
+        android:layout_marginRight="@dimen/dp4"
+        android:layout_marginTop="@dimen/dp8"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/gray_212121"
+        android:textSize="@dimen/sp14"
+        tools:text="信丰县国光购物广场进口" />
+
+</LinearLayout>-->

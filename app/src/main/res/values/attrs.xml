@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--*********************************************************************** -->
+    <!-- 圆形ImageView -->
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension"/>
+        <attr name="border_color" format="color"/>
+        <attr name="border_overlay" format="boolean"/>
+    </declare-styleable>
+
+    <!--*********************************************************************** -->
+    <!-- material 圆形进度 -->
+    <declare-styleable name="MDLoadingView">
+        <attr name="bGradient" format="boolean"></attr>
+        <attr name="circleColor" format="color"></attr>
+        <attr name="circleWidth" format="dimension"></attr>
+        <attr name="radius" format="dimension"></attr>
+    </declare-styleable>
+
+    <!--*********************************************************************** -->
+    <!-- HorizontalListView -->
+    <declare-styleable name="HorizontalListView">
+        <attr name="dividerWidth" format="dimension"/>
+        <attr name="android:divider"/>
+        <attr name="android:requiresFadingEdge"/>
+        <attr name="android:fadingEdgeLength"/>
+    </declare-styleable>
+    <!-- HorizontalListView -->
+    <!--刻度尺-->
+    <declare-styleable name="ScaleView">
+        <attr name="lf_scale_view_max" format="integer|reference"/>
+        <attr name="lf_scale_view_min" format="integer|reference"/>
+        <attr name="lf_scale_view_height" format="dimension|reference"/>
+        <attr name="lf_scale_view_max_height" format="dimension|reference"/>
+        <attr name="lf_scale_view_margin" format="dimension|reference"/>
+    </declare-styleable>
+    <!--水印文字-->
+    <declare-styleable name="WaterMarkText">
+        <attr name="degree" format="integer"/>
+    </declare-styleable>
+    <!-- 自定义矩形进度条 -->
+    <declare-styleable name="AlarmProgressView">
+        <attr name="bg_color" format="color" />
+        <attr name="front_head_color" format="color" />
+        <attr name="front_end_color" format="color" />
+        <attr name="vein_src" format="reference" />
+    </declare-styleable>
+    <!-- 自定义环形进度条 -->
+    <declare-styleable name="CircleProgressView">
+        <attr name="head_color" format="color" />
+        <attr name="end_color" format="color" />
+        <attr name="circle_width" format="dimension" />
+        <attr name="score_size" format="dimension" />
+        <attr name="score_color" format="color" />
+        <attr name="semblance_size" format="dimension" />
+        <attr name="semblance_color" format="color" />
+    </declare-styleable>
+    <!-- 自定义环形进度条 -->
+    <declare-styleable name="CircleProgressNewView">
+        <attr name="new_head_color" format="color" />
+        <attr name="new_end_color" format="color" />
+        <attr name="new_circle_width" format="dimension" />
+        <attr name="new_score_size" format="dimension" />
+        <attr name="new_score_color" format="color" />
+        <attr name="new_semblance_size" format="dimension" />
+        <attr name="new_semblance_color" format="color" />
+    </declare-styleable>
+    <!--登录EditText动画条-->
+    <declare-styleable name="DashView">
+        <attr name="solid_color" format="color" />
+        <attr name="base_color" format="color" />
+    </declare-styleable>
+    <!--相似度seekbar-->
+    <declare-styleable name="SimilaritySeekBar">
+        <attr name="default_value" format="integer" />
+        <attr name="min_value" format="integer" />
+        <attr name="max_value" format="integer" />
+    </declare-styleable>
+    <!--心跳控件-->
+    <declare-styleable name="HeartbeatView">
+        <attr name="theme_color" format="color"/>
+    </declare-styleable>
+    <!--ViewPager指示器-->
+    <declare-styleable name="IndicatorView">
+        <attr name="line_color" format="color"/>
+        <attr name="single_width" format="dimension"/>
+        <attr name="gap_width" format="dimension"/><!--如果只有2个文字，文字中间的距离-->
+    </declare-styleable>
+    <!--侧滑删除-->
+    <declare-styleable name="SwipeMenuLayout">
+        <attr name="swipeEnable" format="boolean"/>
+        <attr name="ios" format="boolean"/>
+        <attr name="leftSwipe" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="SideBar">
+        <attr name="normalColor" format="color"/>
+        <attr name="pressColor" format="color"/>
+        <attr name="textSize" format="dimension"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,187 @@
+package com.lzy.imagepicker.adapter;
+
+import android.Manifest;
+import android.app.Activity;
+import android.support.v4.app.ActivityCompat;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AbsListView;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+
+import com.cjt2325.cameralibrary.JCameraView;
+import com.lingdanet.safeguard.common.utils.ToastUtils;
+import com.lzy.imagepicker.ImagePicker;
+import com.lzy.imagepicker.R;
+import com.lzy.imagepicker.bean.MediaItem;
+import com.lzy.imagepicker.ui.ImageBaseActivity;
+import com.lzy.imagepicker.ui.ImageGridActivity;
+import com.lzy.imagepicker.util.Utils;
+import com.lzy.imagepicker.view.SuperCheckBox;
+
+import java.util.ArrayList;
+
+/**
+ * ================================================
+ * 作    者：jeasonlzy（廖子尧 Github地址：https://github.com/jeasonlzy0216
+ * 版    本：1.0
+ * 创建日期：2016/5/19
+ * 描    述：
+ * 修订历史：
+ * ================================================
+ */
+public class ImageGridAdapter extends BaseAdapter {
+
+    private static final int ITEM_TYPE_CAMERA = 0;  //第一个条目是相机
+    private static final int ITEM_TYPE_NORMAL = 1;  //第一个条目不是相机
+
+    private ImagePicker imagePicker;
+    private Activity mActivity;
+    private ArrayList<MediaItem> images = new ArrayList<>();       //当前需要显示的所有的图片数据
+    private ArrayList<MediaItem> mSelectedImages; //全局保存的已经选中的图片数据
+    private boolean isShowCamera;         //是否显示拍照按钮
+    private int mImageSize;               //每个条目的大小
+    private OnImageItemClickListener listener;   //图片被点击的监听
+
+    public ImageGridAdapter(Activity activity, ArrayList<MediaItem> images) {
+        this.mActivity = activity;
+        if (images != null) {
+            this.images = images;
+        }
+
+        mImageSize = Utils.getImageItemWidth(mActivity);
+        imagePicker = ImagePicker.getInstance();
+        isShowCamera = imagePicker.isShowCamera();
+        mSelectedImages = imagePicker.getSelectedMedias();
+    }
+
+    public void refreshData(ArrayList<MediaItem> images) {
+        if (images != null) {
+            this.images = images;
+            notifyDataSetChanged();
+        }
+    }
+
+    @Override
+    public int getViewTypeCount() {
+        return 2;
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        if (isShowCamera) return position == 0 ? ITEM_TYPE_CAMERA : ITEM_TYPE_NORMAL;
+        return ITEM_TYPE_NORMAL;
+    }
+
+    @Override
+    public int getCount() {
+        return isShowCamera ? images.size() + 1 : images.size();
+    }
+
+    @Override
+    public MediaItem getItem(int position) {
+        if (isShowCamera) {
+            if (position == 0) return null;
+            return images.get(position - 1);
+        } else {
+            return images.get(position);
+        }
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
+
+    @Override
+    public View getView(final int position, View convertView, ViewGroup parent) {
+        int itemViewType = getItemViewType(position);
+        if (itemViewType == ITEM_TYPE_CAMERA) {
+            convertView = LayoutInflater.from(mActivity).inflate(R.layout.adapter_camera_item, parent, false);
+            convertView.setLayoutParams(new AbsListView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, mImageSize)); //让图片是个正方形
+            convertView.setTag(null);
+            convertView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (!((ImageBaseActivity) mActivity).checkPermission(Manifest.permission.CAMERA)) {
+                        ActivityCompat.requestPermissions(mActivity, new String[]{Manifest.permission.CAMERA}, ImageGridActivity.REQUEST_PERMISSION_CAMERA);
+                    } else {
+                        imagePicker.takePicture(mActivity, ImagePicker.REQUEST_CODE_TAKE, JCameraView.BUTTON_STATE_BOTH);
+                    }
+                }
+            });
+        } else {
+            final ViewHolder holder;
+            if (convertView == null) {
+                convertView = LayoutInflater.from(mActivity).inflate(R.layout.adapter_image_list_item, parent, false);
+                convertView.setLayoutParams(new AbsListView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, mImageSize)); //让图片是个正方形
+                holder = new ViewHolder(convertView);
+                convertView.setTag(holder);
+            } else {
+                holder = (ViewHolder) convertView.getTag();
+            }
+            final MediaItem mediaItem = getItem(position);
+
+            holder.ivThumb.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (listener != null)
+                        listener.onImageItemClick(holder.rootView, mediaItem, position);
+                }
+            });
+            holder.cbCheck.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int selectLimit = imagePicker.getMediaLimit();
+                    if (holder.cbCheck.isChecked() && mSelectedImages.size() >= selectLimit) {
+                        ToastUtils.showShort(R.string.select_limit, selectLimit);
+                        holder.cbCheck.setChecked(false);
+                        holder.mask.setVisibility(View.GONE);
+                    } else {
+                        imagePicker.addSelectedMediaItem(position, mediaItem, holder.cbCheck.isChecked());
+                        holder.mask.setVisibility(View.VISIBLE);
+                    }
+                }
+            });
+            //根据是否多选，显示或隐藏checkbox
+            if (imagePicker.isMultiMode()) {
+                holder.cbCheck.setVisibility(View.VISIBLE);
+                boolean checked = mSelectedImages.contains(mediaItem);
+                if (checked) {
+                    holder.mask.setVisibility(View.VISIBLE);
+                    holder.cbCheck.setChecked(true);
+                } else {
+                    holder.mask.setVisibility(View.GONE);
+                    holder.cbCheck.setChecked(false);
+                }
+            } else {
+                holder.cbCheck.setVisibility(View.GONE);
+            }
+            imagePicker.getImageLoader().displayImage(mActivity, mediaItem.path, holder.ivThumb, mImageSize, mImageSize, null); //显示图片
+        }
+        return convertView;
+    }
+
+    private class ViewHolder {
+        public View rootView;
+        public ImageView ivThumb;
+        public View mask;
+        public SuperCheckBox cbCheck;
+
+        public ViewHolder(View view) {
+            rootView = view;
+            ivThumb = (ImageView) view.findViewById(R.id.iv_thumb);
+            mask = view.findViewById(R.id.mask);
+            cbCheck = (SuperCheckBox) view.findViewById(R.id.cb_check);
+        }
+    }
+
+    public void setOnImageItemClickListener(OnImageItemClickListener listener) {
+        this.listener = listener;
+    }
+
+    public interface OnImageItemClickListener {
+        void onImageItemClick(View view, MediaItem mediaItem, int position);
+    }
+}

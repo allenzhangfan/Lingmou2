@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="78dp"
+    android:layout_gravity="center"
+    app:cardElevation="0dp"
+    app:cardUseCompatPadding="true"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/position_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:background="@drawable/position_track_flag"
+            android:gravity="center_horizontal"
+            android:text="1"
+            android:textColor="@color/white"
+            />
+
+        <ImageView
+            android:id="@+id/person_face_iv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="18dp"
+            android:layout_toRightOf="@id/position_tv"
+            android:src="@drawable/placeholder_face_list"
+            />
+
+        <ImageView
+            android:id="@+id/right_arrow_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="9dp"
+            android:src="@drawable/right_arrow"
+            />
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginTop="14dp"
+            android:layout_toRightOf="@id/person_face_iv"
+            android:layout_toLeftOf="@id/right_arrow_iv"
+            android:layout_marginRight="10dip"
+            android:text="丽水佳园15栋1单元1803号"
+            android:textColor="@color/default_text_color"
+            android:textSize="13sp"
+            />
+
+        <TextView
+            android:id="@+id/date_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="14dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/person_face_iv"
+            android:layout_toLeftOf="@id/right_arrow_iv"
+            android:text="2018-01-22 16:15:12"
+            android:textColor="@color/mine_text_color"
+            android:textSize="@dimen/sp12"
+            />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

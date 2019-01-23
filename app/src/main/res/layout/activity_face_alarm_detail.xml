@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg_app"
+              android:orientation="vertical"
+              android:fitsSystemWindows="true"
+    >
+
+    <include
+        layout="@layout/include_head_item"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/root_view"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="15dip"
+        >
+
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/title_cardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="18dip"
+                    app:cardCornerRadius="2dip"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150dip"
+                        android:orientation="horizontal"
+                        android:padding="18dip"
+                        >
+                        <RelativeLayout
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            >
+                            <ImageView
+                                android:id="@+id/tag_iv"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                />
+                            <ImageView
+                                android:id="@+id/water_tag_iv"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dip"
+                            android:layout_marginLeft="15dip"
+                            android:layout_marginRight="15dip"
+                            android:layout_marginTop="10dip"
+                            android:layout_weight="1.4"
+                            >
+
+                            <cloud.antelope.lingmou.mvp.ui.widget.CircleProgressView
+                                android:id="@+id/score_progress"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true"
+                                app:circle_width="8dip"
+                                app:end_color="@color/alarm_progress_front_end"
+                                app:head_color="@color/alarm_progress_front_head"
+                                app:score_size="22sp"
+                                app:semblance_size="11sp"
+                                />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            >
+                            <ImageView
+                                android:id="@+id/bukong_iv"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                />
+                            <ImageView
+                                android:id="@+id/water_bk_iv"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dip"
+                    android:layout_marginTop="15dip"
+                    android:text="抓拍信息"
+                    />
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="18dip"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dip"
+                            android:orientation="horizontal"
+                            android:paddingBottom="10dip"
+                            android:paddingTop="10dip"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="抓拍时间"
+                                android:textColor="@color/detail_title"
+                                android:textSize="14sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/time_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dip"
+                                android:textColor="@color/mine_text_color"
+                                android:textSize="14sp"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="10dip"
+                            android:paddingTop="10dip"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="抓拍地点"
+                                android:textColor="@color/detail_title"
+                                android:textSize="14sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/address_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dip"
+                                android:textColor="@color/mine_text_color"
+                                android:textSize="14sp"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dip"
+                    android:layout_marginTop="15dip"
+                    android:text="布控人员"
+                    />
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    app:cardCornerRadius="2dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="18dip"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="10dip"
+                            android:paddingTop="10dip"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="人员姓名"
+                                android:textColor="@color/detail_title"
+                                android:textSize="14sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/name_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dip"
+                                android:textColor="@color/mine_text_color"
+                                android:textSize="14sp"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="10dip"
+                            android:paddingTop="10dip"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="布控库　"
+                                android:textColor="@color/detail_title"
+                                android:textSize="14sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/type_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dip"
+                                android:text="----"
+                                android:textColor="@color/mine_text_color"
+                                android:textSize="14sp"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="10dip"
+                            android:paddingTop="10dip"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="布控任务"
+                                android:textColor="@color/detail_title"
+                                android:textSize="14sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/task_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dip"
+                                android:text="----"
+                                android:textColor="@color/mine_text_color"
+                                android:textSize="14sp"
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="10dip"
+                            android:paddingTop="10dip"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="人员性别"
+                                android:textColor="@color/detail_title"
+                                android:textSize="14sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/gender_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dip"
+                                android:textColor="@color/mine_text_color"
+                                android:textSize="14sp"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="10dip"
+                            android:paddingTop="10dip"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="人员民族"
+                                android:textColor="@color/detail_title"
+                                android:textSize="14sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/nation_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dip"
+                                android:text="----"
+                                android:textColor="@color/mine_text_color"
+                                android:textSize="14sp"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="10dip"
+                            android:paddingTop="10dip"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="人员生日"
+                                android:textColor="@color/detail_title"
+                                android:textSize="14sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/birth_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dip"
+                                android:text="----"
+                                android:textColor="@color/mine_text_color"
+                                android:textSize="14sp"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="10dip"
+                            android:paddingTop="10dip"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="身份证号"
+                                android:textColor="@color/detail_title"
+                                android:textSize="14sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/idcard_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dip"
+                                android:text="----"
+                                android:textColor="@color/mine_text_color"
+                                android:textSize="14sp"
+                                />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dip"
+                    android:layout_marginTop="15dip"
+                    android:text="告警处理"
+                    android:textColor="@color/detail_title"
+                    android:textSize="14sp"
+                    />
+
+
+                <EditText
+                    android:id="@+id/deal_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:background="@drawable/rect_white_5_shape"
+                    android:gravity="left|top"
+                    android:minHeight="120dip"
+                    android:paddingBottom="5dip"
+                    android:paddingLeft="18dip"
+                    android:paddingRight="10dip"
+                    android:paddingTop="5dip"
+                    android:textColor="@color/mine_text_color"
+                    android:textSize="14sp"
+                    />
+
+                <View
+                    android:id="@+id/redundant_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/mine_divider_line_color"
+            />
+
+        <TextView
+            android:id="@+id/dealed_tv"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:background="@color/mine_text_color"
+            android:gravity="center"
+            android:text="已处理：有效"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="gone"
+            />
+
+        <LinearLayout
+            android:id="@+id/undo_ll"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            >
+
+            <Button
+                android:id="@+id/invalid_btn"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:text="无效"
+                android:textColor="@color/tab_default_text_color"
+                android:textSize="14sp"
+                />
+
+            <Button
+                android:id="@+id/valid_btn"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#36A8FF"
+                android:text="有效"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

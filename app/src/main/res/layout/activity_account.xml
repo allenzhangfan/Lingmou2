@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_head_item" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_f7f7f7"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/header_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dip"
+            android:background="@drawable/selector_button_press_white"
+            android:minHeight="90dip"
+            android:paddingLeft="18dip"
+            android:paddingRight="18dip">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/header"
+                android:textColor="@color/gray_424242"
+                android:textSize="@dimen/sp15" />
+
+            <ImageView
+                android:id="@+id/account_arrow_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/right_arrow" />
+
+            <ImageView
+                android:id="@+id/header_iv"
+                android:layout_width="70dip"
+                android:layout_height="70dip"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="18dip"
+                android:layout_toLeftOf="@id/account_arrow_iv"
+                android:src="@drawable/user_header_default" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/home_divider_lint" />
+
+        <LinearLayout
+            android:id="@+id/nick_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:minHeight="48dip"
+            android:orientation="horizontal"
+            android:paddingLeft="18dip"
+            android:paddingRight="18dip">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/my_account_text"
+                android:textColor="@color/gray_424242"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/nick_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="36dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:singleLine="true"
+                android:textColor="@color/gray_212121"
+                android:textSize="@dimen/sp15" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/password_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dip"
+            android:background="@drawable/selector_button_press_white"
+            android:drawablePadding="18dip"
+            android:drawableRight="@drawable/right_arrow"
+            android:gravity="center_vertical"
+            android:minHeight="48dip"
+            android:paddingLeft="18dip"
+            android:paddingRight="18dip"
+            android:text="@string/modify_login_password"
+            android:textColor="@color/gray_424242"
+            android:textSize="@dimen/sp15" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/logout_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp48"
+            android:background="@drawable/shape_logout"
+            android:gravity="center"
+            android:text="@string/logout_text"
+            android:textColor="@color/yellow_ff8f00"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

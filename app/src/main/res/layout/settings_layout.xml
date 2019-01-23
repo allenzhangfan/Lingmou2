@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/root_layout"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg_app"
+              android:orientation="vertical"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <!-- 头像 -->
+            <RelativeLayout
+                android:id="@+id/avatar_area"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:background="@drawable/settings_item_bg"
+                >
+
+                <TextView
+                    style="@style/SettingsTextStyle"
+                    android:text="@string/avatar_text"
+                    />
+
+                <cloud.antelope.lingmou.customview.CircleImageView
+                    android:id="@+id/my_avatar_iv"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="40dp"
+                    android:src="@drawable/ic_settings_avatar"
+                    app:border_color="@color/my_divider_bg_grey"
+                    app:border_width="0.5dp"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="16dp"
+                    android:src="@drawable/right_arrow"
+                    />
+
+                <View
+                    style="@style/MySettingLineDivide"
+                    android:layout_alignParentBottom="true"
+                    />
+            </RelativeLayout>
+
+
+            <!-- 昵称 -->
+            <RelativeLayout
+                android:id="@+id/nickname_area"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/settings_item_bg"
+                android:gravity="center"
+                >
+
+                <TextView
+                    style="@style/SettingsTextStyle"
+                    android:text="@string/nickname_text"
+                    />
+
+                <TextView
+                    android:id="@+id/my_nickname_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/nickname_arrow_iv"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:maxLength="16"
+                    android:textColor="@color/settings_value_color"
+                    android:textSize="@dimen/sp12"
+                    />
+
+                <ImageView
+                    android:id="@+id/nickname_arrow_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="16dp"
+                    android:src="@drawable/right_arrow"
+                    />
+
+                <View
+                    style="@style/MySettingLineDivide"
+                    android:layout_alignParentBottom="true"
+                    />
+            </RelativeLayout>
+
+            <!-- 我的账号 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white"
+                >
+
+                <TextView
+                    style="@style/SettingsTextStyle"
+                    android:text="@string/my_account_text"
+                    />
+
+                <TextView
+                    android:id="@+id/my_account_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="40dp"
+                    android:textColor="@color/settings_value_color"
+                    android:textSize="@dimen/sp12"
+                    />
+
+                <View
+                    style="@style/MySettingLineDivide"
+                    android:layout_alignParentBottom="true"
+                    />
+            </RelativeLayout>
+
+            <View
+                style="@style/MyItemDivide"
+                />
+
+            <!-- 修改密码 -->
+            <TextView
+                android:id="@+id/modify_pwd_area"
+                style="@style/MyTextItem"
+                android:layout_height="45dip"
+                android:drawableRight="@drawable/right_arrow"
+                android:text="@string/modify_pwd_text"
+                />
+
+            <View
+                style="@style/MySettingLineDivide"
+                />
+
+            <View
+                style="@style/MyItemDivide"
+                />
+
+            <!-- 接收消息 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/settings_item_bg"
+                >
+
+                <TextView
+                    style="@style/SettingsTextStyle"
+                    android:text="@string/accept_msg_text"
+                    />
+
+                <Switch
+                    android:id="@+id/receive_msg_switch"
+                    android:layout_width="38dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dip"
+                    android:background="@drawable/btn_toggle_selector"
+                    android:button="@null"
+                    android:checked="true"
+                    android:textOff=""
+                    android:textOn=""
+                    android:thumb="@color/transparent"
+                    android:track="@color/transparent"
+                    />
+
+                <View
+                    style="@style/MySettingLineDivide"
+                    android:layout_alignParentBottom="true"
+                    />
+            </RelativeLayout>
+
+            <View
+                style="@style/MyItemDivide"
+                />
+
+            <!-- 清除缓存 -->
+            <RelativeLayout
+                android:id="@+id/clear_cache_area"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:background="@drawable/settings_item_bg"
+                android:paddingLeft="@dimen/dp15"
+                android:visibility="gone"
+                >
+
+                <ImageView
+                    android:id="@+id/clear_cache_label"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/clear_cache_label"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp15"
+                    android:layout_toRightOf="@id/clear_cache_label"
+                    android:text="@string/clear_cache_text"
+                    android:textColor="@color/mine_text_color"
+                    android:textSize="@dimen/dp16"
+                    />
+
+                <ImageView
+                    style="@style/RightImage"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="23dip"
+                    />
+
+                <View
+                    style="@style/MySettingLineDivide"
+                    android:layout_alignParentBottom="true"
+                    />
+            </RelativeLayout>
+
+            <!-- 关于 -->
+            <TextView
+                android:id="@+id/about_area"
+                style="@style/MyTextItem"
+                android:layout_height="45dip"
+                android:drawableRight="@drawable/right_arrow"
+                android:text="@string/about_text"
+                />
+
+            <View
+                style="@style/MySettingLineDivide"
+                />
+
+            <!-- 更新 -->
+            <RelativeLayout
+                android:id="@+id/update_area"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:layout_below="@id/about_area"
+                android:background="@drawable/settings_item_bg"
+                android:paddingLeft="@dimen/dp15"
+                android:visibility="gone"
+                >
+
+
+                <ImageView
+                    android:id="@+id/update_label"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/update_label"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp15"
+                    android:layout_toRightOf="@id/update_label"
+                    android:text="@string/update"
+                    android:textColor="@color/mine_text_color"
+                    android:textSize="@dimen/dp16"
+                    />
+            </RelativeLayout>
+
+            <View
+                style="@style/MyItemDivide"
+                />
+
+            <!-- 关于 -->
+            <TextView
+                android:id="@+id/logout_btn"
+                style="@style/MyTextItem"
+                android:layout_height="45dip"
+                android:gravity="center"
+                android:text="@string/logout_text"
+                android:textColor="@color/primary"
+                />
+
+            <View
+                style="@style/MySettingLineDivide"
+                android:layout_marginLeft="0dp"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

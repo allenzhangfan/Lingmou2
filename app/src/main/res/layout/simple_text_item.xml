@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          android:id="@+id/simple_tv"
+          android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:layout_marginLeft="18dp"
+          android:layout_marginRight="18dp"
+          android:ellipsize="end"
+          android:gravity="center_vertical"
+          android:singleLine="true"
+          android:text="服务站"
+          android:textColor="@color/default_text_color"
+          android:textSize="14sp"
+    >
+</TextView>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">智慧云眼-云眼大视界</string>
+    <string name="company_name">羚羊云　　云眼大视界</string>
+    <string name="search_image">以图搜图</string>
+    <string name="solo_broadcast">移动云眼</string>
+
+    <string name="bugly_id">4ccd0f5e21</string>
+    <string name="share_sdk_appid">231fbf325703e</string>
+    <string name="share_sdk_appkey">2cf9e710e15760877cdf9d38d295ce5a</string>
+
+    <string name="storage_subject">zhyy.clue</string>
+    <string name="storage_root_path">zhyy</string>
+
+</resources>

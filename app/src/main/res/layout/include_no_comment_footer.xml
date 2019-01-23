@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          android:id="@+id/tip_no_comment_tv"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_horizontal"
+          android:background="@color/bg_app"
+          android:gravity="center"
+          android:paddingBottom="16dp"
+          android:paddingTop="16dp"
+          android:text="@string/tip_no_comment"
+          android:textColor="@color/edit_text_hint_color"
+          android:textSize="12sp"
+    >
+
+</TextView>

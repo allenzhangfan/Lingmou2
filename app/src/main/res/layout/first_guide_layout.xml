@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+    >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/guide_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    </android.support.v4.view.ViewPager>
+
+    <com.viewpagerindicator.LinePageIndicator
+        android:id="@+id/guide_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="28dp"
+        android:visibility="gone"
+        android:padding="3dip"
+        app:gapWidth="10dp"
+        app:lineWidth="16dp"
+        app:selectedColor="@color/yellow_ffa000"
+        app:strokeWidth="3dp"
+        app:unselectedColor="@color/gray_f7f7f7"
+        />
+
+    <Button
+        android:id="@+id/app_start_btn"
+        android:layout_width="150dp"
+        android:layout_height="@dimen/dp44"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/shape_rect_yellow_cornor_large"
+        android:clickable="true"
+        android:text="开 启 3.0"
+        android:textScaleX="1.2"
+        android:textSize="@dimen/sp16"
+        android:textColor="@color/white"
+        android:visibility="invisible"
+        />
+
+</RelativeLayout>

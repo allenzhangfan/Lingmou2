@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_horizontal"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:background="@color/white"
+    >
+
+    <DatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:gravity="center_horizontal"
+                android:spinnersShown="true"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/login_divide_line_color"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        >
+
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@android:string/cancel"
+            android:textSize="14sp"
+            android:textColor="@color/tab_default_text_color"
+            android:background="@drawable/date_item_bg_selector"
+            />
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/login_divide_line_color"
+            />
+        <Button
+            android:id="@+id/ok_btn"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@android:string/ok"
+            android:textSize="14sp"
+            android:textColor="@color/tab_default_text_color"
+            android:background="@drawable/date_item_bg_selector"
+            />
+    </LinearLayout>
+</LinearLayout>

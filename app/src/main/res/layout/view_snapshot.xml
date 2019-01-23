@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/view_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent50" />
+
+    <ImageView
+        android:id="@+id/iv_pic_"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:background="@color/gray_eee" />
+
+    <RelativeLayout
+        android:id="@+id/rl_center"
+        android:layout_width="@dimen/dp336"
+        android:layout_height="@dimen/dp228"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp74"
+        >
+
+        <View
+            android:id="@+id/view_white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_rect_corner_4"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_pic"
+            android:layout_width="@dimen/dp320"
+            android:layout_height="@dimen/dp180"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp8"
+            android:background="@color/gray_eee" />
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/iv_pic"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/ll_collect"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/collect" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp8"
+                    android:text="@string/collect"
+                    android:textColor="@color/yellow_ff8f00"
+                    android:textSize="@dimen/sp14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_download"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/download_blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp8"
+                    android:text="@string/download"
+                    android:textColor="@color/blue_03a9f4"
+                    android:textSize="@dimen/sp14" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/ib_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/rl_center"
+        android:layout_marginLeft="-12dp"
+        android:layout_marginTop="-12dp"
+        android:layout_toRightOf="@+id/rl_center"
+        android:background="@drawable/close_yellow"
+        android:visibility="gone" />
+</RelativeLayout>

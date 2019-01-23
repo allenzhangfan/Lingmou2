@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <com.cjt2325.cameralibrary.JCameraView
+            android:id="@+id/camera_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <View
+            android:id="@+id/blackCover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"
+            android:visibility="gone"
+            />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dip"
+                android:background="@color/twenty_transparent_black"
+                >
+
+                <ImageView
+                    android:id="@+id/back_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dip"
+                    android:src="@drawable/back_btn_white"
+                    android:padding="20dip"
+                    android:scaleType="center"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/capture_base_rl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <TextView
+                    android:id="@+id/capture_hint_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_alignParentBottom="true"
+                    android:text="拍照过程中请保持脸部处于显示框内"
+                    android:background="@color/twenty_transparent_black"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    />
+                <RelativeLayout
+                    android:id="@+id/capture_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@id/capture_hint_tv"
+                    >
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/flash_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:visibility="invisible"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dip"
+                android:gravity="center"
+                android:orientation="horizontal"
+                >
+
+                <RelativeLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+
+                    <ImageView
+                        android:id="@+id/album_btn"
+                        android:layout_width="50dip"
+                        android:layout_height="50dip"
+                        android:layout_centerInParent="true"
+                        android:background="@android:color/transparent"
+                        android:text="相册"
+                        />
+                </RelativeLayout>
+
+
+                <ImageButton
+                    android:id="@+id/capture_btn"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/take_photo"
+                    android:text="拍照"
+                    />
+
+                <ImageButton
+                    android:id="@+id/front_btn"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/take_picture_front"
+                    android:text="前/后置"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:gravity="center"
+                android:text="拍摄"
+                android:textColor="@color/default_text_color"
+                android:textSize="16sp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

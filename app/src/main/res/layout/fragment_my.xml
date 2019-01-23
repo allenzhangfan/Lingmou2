@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:scrollbars="none">
+    <LinearLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/search_bg_color"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/ll_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dp36"
+            android:paddingTop="@dimen/dp44">
+
+            <TextView
+                android:id="@+id/username_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp16"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:textColor="@color/default_text_color"
+                android:textSize="@dimen/sp28"
+                tools:text="月初老九" />
+
+            <ImageView
+                android:id="@+id/header_iv"
+                android:layout_width="@dimen/dp48"
+                android:layout_height="@dimen/dp48"
+                android:src="@drawable/user_header_default" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp16"
+                android:src="@drawable/go" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp8"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/local_address_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/location_address_icon"
+                android:drawablePadding="5dip"
+                android:textColor="@color/color_gray"
+                android:textSize="14sp"
+                android:visibility="gone" />
+            <!-- <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_marginTop="30dip"
+                 >
+                 <TextView
+                     android:id="@+id/tv_my_message"
+                     android:layout_width="0dip"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1"
+                     android:drawableTop="@drawable/my_message_icon"
+                     android:drawablePadding="5dip"
+                     android:gravity="center"
+                     android:textSize="14sp"
+                     android:textColor="@color/color_cloud_eye_deep"
+                     android:text="@string/my_message"
+                     />
+
+                 <TextView
+                     android:id="@+id/my_clue_tv"
+                     android:layout_width="0dip"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1"
+                     android:drawableTop="@drawable/my_clue_new_icon"
+                     android:drawablePadding="5dip"
+                     android:gravity="center"
+                     android:textSize="14sp"
+                     android:textColor="@color/color_cloud_eye_deep"
+                     android:text="@string/my_clue"
+                     />
+
+                 <TextView
+                     android:layout_width="0dip"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1"
+                     android:drawableTop="@drawable/my_collect_icon"
+                     android:drawablePadding="5dip"
+                     android:gravity="center"
+                     android:textSize="14sp"
+                     android:textColor="@color/color_cloud_eye_deep"
+                     android:text="@string/my_favorite"
+                     />
+             </LinearLayout>-->
+
+            <TextView
+                android:id="@+id/my_clue_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp8"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/clue"
+                android:drawablePadding="8dip"
+                android:drawableRight="@drawable/arrow"
+                android:gravity="center_vertical"
+                android:minHeight="50dip"
+                android:paddingLeft="@dimen/dp16"
+                android:paddingRight="@dimen/dp16"
+                android:text="@string/my_clue"
+                android:textColor="@color/default_text_color"
+                android:textSize="@dimen/sp16" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginRight="@dimen/dp16"
+                android:layout_marginLeft="@dimen/dp16"
+                android:background="@color/mine_divider_line_color" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:minHeight="50dip"
+                android:paddingRight="@dimen/dp16"
+                android:paddingLeft="@dimen/dp16"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/my_push_icon"
+                    android:drawablePadding="8dip"
+                    android:gravity="center"
+                    android:text="@string/message_receive"
+                    android:textColor="@color/default_text_color"
+                    android:textSize="@dimen/sp16" />
+
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/message_receive_sb"
+                    android:layout_width="@dimen/dp40"
+                    android:layout_height="@dimen/dp20"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    app:kswBackColor="@color/blue_0080FF"
+                    app:kswThumbColor="@color/white"
+                    app:kswThumbMargin="2dp"
+                    app:kswThumbRangeRatio="2.15" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginRight="@dimen/dp16"
+                android:layout_marginLeft="@dimen/dp16"
+                android:background="@color/mine_divider_line_color" />
+            <RelativeLayout
+                android:id="@+id/clean_cache_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:minHeight="50dip"
+                android:paddingLeft="@dimen/dp16"
+                android:paddingRight="@dimen/dp16"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/my_clear_icon"
+                    android:drawablePadding="8dip"
+                    android:gravity="center"
+                    android:text="@string/clean_cache"
+                    android:textColor="@color/default_text_color"
+                    android:textSize="@dimen/sp16" />
+
+                <ImageView
+                    android:id="@+id/arrow_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="18dp"
+                    android:src="@drawable/right_arrow"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/cache_size_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="9dip"
+                    tools:text="22M"
+                    android:textColor="@color/gray_bfbfbf"
+                    android:textSize="@dimen/sp14" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginRight="@dimen/dp16"
+                android:layout_marginLeft="@dimen/dp16"
+                android:background="@color/mine_divider_line_color" />
+            <TextView
+                android:id="@+id/feedback_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/my_feedback_icon"
+                android:drawablePadding="8dip"
+                android:drawableRight="@drawable/arrow"
+                android:gravity="center_vertical"
+                android:minHeight="50dip"
+                android:paddingRight="@dimen/dp16"
+                android:paddingLeft="@dimen/dp16"
+                android:text="@string/feedback"
+                android:textColor="@color/default_text_color"
+                android:textSize="@dimen/sp16" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginRight="@dimen/dp16"
+                android:layout_marginLeft="@dimen/dp16"
+                android:background="@color/mine_divider_line_color" />
+            <TextView
+                android:id="@+id/about_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/my_about_icon"
+                android:drawablePadding="8dip"
+                android:drawableRight="@drawable/arrow"
+                android:gravity="center_vertical"
+                android:minHeight="50dip"
+                android:text="@string/about_text"
+                android:paddingLeft="@dimen/dp16"
+                android:paddingRight="@dimen/dp16"
+                android:textColor="@color/default_text_color"
+                android:textSize="@dimen/sp16" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginRight="@dimen/dp16"
+                android:layout_marginLeft="@dimen/dp16"
+                android:background="@color/mine_divider_line_color" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

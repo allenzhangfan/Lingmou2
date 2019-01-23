@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/root"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg_app"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical"
+    >
+
+    <include layout="@layout/include_head_item"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/a_half_dp"
+        android:background="@color/home_divider_lint"
+        />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipe_refresh_widget"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_app"
+        >
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                android:visibility="invisible"
+                />
+            <TextView
+                android:id="@+id/empty_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="100dp"
+                android:drawablePadding="18dip"
+                android:drawableTop="@drawable/no_object_icon"
+                android:gravity="center"
+                android:text="@string/tip_no_case"
+                android:textColor="@color/detail_title"
+                android:textSize="14sp"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/empty_no_network_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="100dp"
+                android:drawablePadding="18dip"
+                android:drawableTop="@drawable/no_internet"
+                android:gravity="center"
+                android:text="@string/empty_network_text"
+                android:textColor="@color/detail_title"
+                android:textSize="14sp"
+                android:visibility="gone"
+                />
+
+            <include
+                layout="@layout/include_no_permission"/>
+        </FrameLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>
+

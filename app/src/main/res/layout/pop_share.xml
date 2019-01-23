@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/bg_app"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/platform_area"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+
+        <RelativeLayout
+            android:id="@+id/wechat_moments_btn"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/share_item_bg_selector"
+            android:padding="@dimen/dp6"
+            >
+
+            <ImageView
+                android:id="@+id/wechat_moments_label"
+                android:layout_width="@dimen/dp67"
+                android:layout_height="@dimen/dp67"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/wx_moments_logo"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/wechat_moments_label"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp8"
+                android:text="@string/wechat_moments_text"
+                android:textSize="11sp"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/wechat_btn"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/share_item_bg_selector"
+            android:padding="@dimen/dp6"
+            >
+
+            <ImageView
+                android:id="@+id/wechat_label"
+                android:layout_width="@dimen/dp67"
+                android:layout_height="@dimen/dp67"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/wx_friend_logo"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/wechat_label"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp8"
+                android:text="@string/wechat_friends_text"
+                android:textSize="11sp"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/qzone_btn"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/share_item_bg_selector"
+            android:padding="@dimen/dp6"
+            >
+
+            <ImageView
+                android:id="@+id/qzone_label"
+                android:layout_width="@dimen/dp67"
+                android:layout_height="@dimen/dp67"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/qzone_logo"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/qzone_label"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp8"
+                android:text="@string/qzone_text"
+                android:textSize="11sp"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/qq_btn"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/share_item_bg_selector"
+            android:padding="@dimen/dp6"
+            >
+
+            <ImageView
+                android:id="@+id/qq_label"
+                android:layout_width="@dimen/dp67"
+                android:layout_height="@dimen/dp67"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/qq_logo"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/qq_label"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp8"
+                android:text="@string/qq_friends_text"
+                android:textSize="11sp"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/a_half_dp"
+        android:layout_below="@id/platform_area"
+        android:background="@color/base_divider_bg_grey"
+        />
+
+    <TextView
+        android:id="@+id/cancel_text"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/line"
+        android:background="@drawable/settings_item_bg"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/new_bounty_color"
+        android:textSize="15sp"
+        />
+
+</RelativeLayout>

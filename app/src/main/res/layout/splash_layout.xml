@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/splash_screen_bg"
+        android:scaleType="fitXY"
+        />
+
+    <TextView
+        android:id="@+id/bottom_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="@string/company_name"
+        android:textColor="@color/gray_9e9e9e"
+        android:textSize="11sp" />
+    <TextView
+        android:id="@+id/zhuanzhu_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_tv"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/sp16"
+        android:textColor="@color/gray_616161"
+        android:layout_marginBottom="@dimen/dp44"
+        android:text="专 注 于 视 频 大 数 据 运 营"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/splash_logo"
+        android:layout_above="@id/zhuanzhu_tv"
+        android:layout_marginBottom="@dimen/dp12"
+        />
+
+</RelativeLayout>

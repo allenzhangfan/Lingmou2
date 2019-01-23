@@ -1,0 +1,278 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'bugly'
+
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    useLibrary 'org.apache.http.legacy'
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId "cloud.antelope.lingmou"
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        testInstrumentationRunner rootProject.ext.dependencies["androidJUnitRunner"]
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64', 'armeabi', "arm64-v8a"
+        }
+
+        manifestPlaceholders = [AMAP_API_KEY_VALUE : "b820ef0fc76da32bcb7543aeeee69326",
+                                MOB_APPKEY_VALUE   : "225923a989e2f",
+                                MOB_APPSECRET_VALUE: "3c51754fc7bff9daaedc44aa4ace2d02",
+                                QQ_SHARE_APPID     : "tencent101437047",
+                                JPUSH_APPKEY_VALUE : "a6498b6ac773f98a02568954",
+                                UMENG_APPKEY_VALUE : "5a0a5e87a40fa3730800010d",
+                                UMENG_CHANNEL_VALUE: "debug"]
+
+        multiDexEnabled true
+
+        multiDexKeepProguard file('multiDexKeep.pro') // keep specific classes using proguard syntax
+        multiDexKeepFile file('multiDexKeep.txt') // keep specific classes
+    }
+
+    signingConfigs {
+        release {
+            Properties properties = new Properties()
+            InputStream inputStream = project.rootProject.file(rootDir.getAbsolutePath() + '/local.properties').newDataInputStream()
+            properties.load(inputStream) //加载资源
+            def key_keyFile = properties.getProperty('key.file')
+            def key_storePassword = properties.getProperty('storePassword')
+            def key_keyAlias = properties.getProperty('keyAlias')
+            def key_keyPassword = properties.getProperty('keyPassword')
+            storeFile file(key_keyFile) //读取字段
+            storePassword key_storePassword
+            keyAlias key_keyAlias
+            keyPassword key_keyPassword
+        }
+    }
+
+    buildTypes {
+
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "boolean", "USE_CANARY", "true"
+
+            versionNameSuffix "-debug"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            signingConfig signingConfigs.release
+        }
+
+        preview {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "boolean", "USE_CANARY", "true"
+
+            debuggable true  // 保留debug信息
+
+            versionNameSuffix "-preview"
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            signingConfig signingConfigs.release
+            matchingFallbacks = ['release', 'debug']
+        }
+
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            buildConfigField "boolean", "USE_CANARY", "false"
+
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            signingConfig signingConfigs.release
+        }
+
+    }
+
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    flavorDimensions "company"
+
+    // 友盟多渠道打包
+    productFlavors {
+        zhyy {
+            dimension "company"
+            applicationId "cloud.antelope.zhyy"
+            manifestPlaceholders = [AMAP_API_KEY_VALUE : "e708641041d6bbbfb4b0ff1abab610ec",
+                                    MOB_APPKEY_VALUE   : "231fbf325703e",
+                                    MOB_APPSECRET_VALUE: "2cf9e710e15760877cdf9d38d295ce5a",
+                                    QQ_SHARE_APPID     : "tencent101451188",
+                                    JPUSH_APPKEY_VALUE : "5d933ade36b476a0a0bd555d",
+                                    UMENG_APPKEY_VALUE : "5a3736fff29d980b1d0000db",
+                                    UMENG_CHANNEL_VALUE: "zhyy"]
+        }
+        lingmou {
+            dimension "company"
+            applicationId "cloud.antelope.lingmou"
+            manifestPlaceholders = [AMAP_API_KEY_VALUE : "b820ef0fc76da32bcb7543aeeee69326",
+                                    MOB_APPKEY_VALUE   : "225923a989e2f",
+                                    MOB_APPSECRET_VALUE: "3c51754fc7bff9daaedc44aa4ace2d02",
+                                    QQ_SHARE_APPID     : "tencent101437047",
+                                    JPUSH_APPKEY_VALUE : "a6498b6ac773f98a02568954",
+                                    UMENG_APPKEY_VALUE : "5a0a5e87a40fa3730800010d",
+                                    UMENG_CHANNEL_VALUE: "lm"]
+        }
+    }
+
+//    productFlavors.all { flavor ->
+////        flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+//    }
+
+    applicationVariants.all { variant ->
+        def buglyAppId = null
+        def buglyAppKey = null
+        if (variant.flavorName.equals("zhyy")) { // 渠道1：channel1
+            buglyAppId = '4ccd0f5e21'
+            buglyAppKey = '9d0671c3-9906-405b-a6eb-c02e08c0b102'
+        } else if (variant.flavorName.equals("lingmou")) { // 渠道2：channel2
+            buglyAppId = '2a6e96dcfa'
+            buglyAppKey = 'af0857a0-34cb-4f0d-8780-b48165737a68'
+        }
+        if (buglyAppId != null) {
+            variant.ext.buglyAppId = buglyAppId
+        }
+        if (buglyAppKey != null) {
+            variant.ext.buglyAppKey = buglyAppKey
+        }
+
+        println "buglyAppId = " + buglyAppId + ", buglyAppKey = " + buglyAppKey
+
+        println "************************** Change output apk name **************************"
+//        variant.outputs.each { output ->
+//            def outputFile = output.outputFile
+//            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+//                // 输出apk名称为lm_v1.0_2017-01-03_wandoujia.apk
+//                def fileName = "${variant.flavorName}_${variant.buildType.name}_v${defaultConfig.versionName}_${releaseTime()}_${defaultConfig.versionCode}.apk"
+//                output.outputFile = new File(outputFile.parent, fileName)
+//            }
+//        }
+        variant.outputs.all {
+            outputFileName = "${variant.flavorName}_${variant.buildType.name}_v${defaultConfig.versionName}_${releaseTime()}_${defaultConfig.versionCode}.apk"
+        }
+    }
+
+    dexOptions {
+        javaMaxHeapSize "2g"
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        disable 'InvalidPackage'
+        disable "ResourceType"
+        abortOnError false
+    }
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //support
+    implementation(rootProject.ext.dependencies["cardview-v7"]) {
+        exclude module: 'support-annotations'
+    }
+    //tools
+    kapt rootProject.ext.dependencies["dagger2-compiler"]
+    implementation rootProject.ext.dependencies["progressmanager"]
+    implementation rootProject.ext.dependencies["retrofit-url-manager"]
+    implementation rootProject.ext.dependencies["lifecyclemodel"]
+    //viewpager指示器
+    implementation rootProject.ext.dependencies["FlycoTabLayout_Lib"]
+    //view
+    kapt(rootProject.ext.dependencies["butterknife-compiler"]) {
+        exclude module: 'support-annotations'
+    }
+    implementation rootProject.ext.dependencies["paginate"]
+    implementation rootProject.ext.dependencies["recyclerViewAdapterHelper"]
+    //glide
+    api(rootProject.ext.dependencies["glide"]) {
+        exclude module: 'support-v4'
+    }
+    kapt(rootProject.ext.dependencies["glide-compiler"]) {
+        exclude module: 'jsr305'
+    }
+    //arms
+    implementation project(':arms')
+    implementation project(':lib_Litepal')
+    implementation project(':lib_ViewPagerIndicator')
+    implementation project(':lib_StickyItemDecoration')
+    implementation project(':lib_ImagePicker')
+    implementation project(':lib_Banner')
+    implementation project(':lib_FlowLayout')
+    //引入二维码扫描框架
+    implementation rootProject.ext.dependencies["zxing"]
+    implementation rootProject.ext.dependencies["bga-qrcodecore"]
+    implementation rootProject.ext.dependencies["bga-zxing"]
+    // 引入switchbutton框架
+    implementation rootProject.ext.dependencies["switchbutton"]
+    // 引入视频缓存框架
+    implementation rootProject.ext.dependencies["videocache"]
+    // 引入bugly的异常上报和应用升级的功能
+    implementation rootProject.ext.dependencies["bugly_crashreport_upgrade"]
+    implementation rootProject.ext.dependencies["bugly_nativecrashreport"]
+    // 引入友盟统计
+    implementation rootProject.ext.dependencies["umeng_analytics"]
+    implementation rootProject.ext.dependencies["umeng_common"]
+    // 导入 Dalvik 可执行文件分包支持库
+    implementation rootProject.ext.dependencies["multidex"]
+    implementation rootProject.ext.dependencies["barlibrary"]
+    implementation rootProject.ext.dependencies["photoview"]
+    implementation rootProject.ext.dependencies["jjwt"]
+    implementation rootProject.ext.dependencies["pickerview"]
+    //Github 仓库上最新的 Demo 具有下一个版本的新特性, 所以依赖最新的远程库会出现版本不兼容的情况, 详情请查看 https://github.com/JessYanCoding/MVPArms/wiki/Issues#2
+    //    implementation 'me.jessyan:arms:2.3.1'
+    //test
+    testImplementation rootProject.ext.dependencies["junit"]
+    debugImplementation rootProject.ext.dependencies["canary-debug"]
+    releaseImplementation rootProject.ext.dependencies["canary-release"]
+    testImplementation rootProject.ext.dependencies["canary-release"]
+    debugImplementation rootProject.ext.dependencies["amitshekhar"]
+
+    //kotlin
+    implementation rootProject.ext.dependencies["kotlinStdlib"]
+    implementation rootProject.ext.dependencies["kotlinReflect"]
+    //拼音
+    implementation rootProject.ext.dependencies["tinypinyin"]
+//测试要求加的
+    implementation 'com.facebook.stetho:stetho:1.4.2'
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.4.2'
+//图片压缩
+    implementation 'com.github.nanchen2251:CompressHelper:1.0.5'
+}
+repositories {
+    mavenCentral()
+}
+kapt {
+    generateStubs = true
+}

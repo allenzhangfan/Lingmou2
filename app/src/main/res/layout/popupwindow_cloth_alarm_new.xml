@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cloth_popup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:visibility="gone"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/bottom_ll"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        >
+        <TextView
+            android:id="@+id/clean_tv"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="清除筛选"
+            android:textColor="@color/detail_title"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/confirm_tv"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/home_text_select"
+            android:gravity="center"
+            android:text="@string/confirm"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/split_view"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@id/bottom_ll"
+        android:layout_marginTop="20dip"
+        android:background="@color/mine_divider_line_color" />
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/split_view"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/cloth_margin_left_right"
+            android:paddingRight="@dimen/cloth_margin_left_right"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="处理状态"
+                android:layout_marginTop="12dip"
+                android:textColor="@color/tab_unselect_color"
+                android:textSize="11sp" />
+
+            <RadioGroup
+                android:id="@+id/alarm_new_rg"
+                android:layout_width="match_parent"
+                android:layout_height="35dip"
+                android:layout_marginTop="18dip"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/alarm_new_none_rb"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/cloth_alarm_bg_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="全部"
+                    android:textColor="@color/home_text_selector"
+                    android:textSize="@dimen/face_depot_text_size" />
+
+                <RadioButton
+                    android:id="@+id/alarm_new_undo_rb"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/cloth_text_padding_left"
+                    android:layout_weight="1"
+                    android:background="@drawable/cloth_alarm_bg_selector"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="未处理"
+                    android:textColor="@color/home_text_selector"
+                    android:textSize="@dimen/face_depot_text_size" />
+
+                <RadioButton
+                    android:id="@+id/alarm_new_valid_rb"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/cloth_text_padding_left"
+                    android:layout_weight="1"
+                    android:background="@drawable/cloth_alarm_bg_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="有效"
+                    android:textColor="@color/home_text_selector"
+                    android:textSize="@dimen/face_depot_text_size" />
+
+                <RadioButton
+                    android:id="@+id/alarm_new_invalid_rb"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/cloth_text_padding_left"
+                    android:layout_weight="1"
+                    android:background="@drawable/cloth_alarm_bg_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="无效"
+                    android:textColor="@color/home_text_selector"
+                    android:textSize="@dimen/face_depot_text_size" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="报警时间"
+                android:layout_marginTop="18dip"
+                android:textColor="@color/tab_unselect_color"
+                android:textSize="11sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dip"
+                android:orientation="horizontal"
+                >
+                <LinearLayout
+                    android:id="@+id/start_time_ll"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="9dip"
+                    android:paddingBottom="20dip"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:background="@drawable/cloth_alarm_bg_selector"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="开始时间"
+                        android:textColor="@color/detail_title"
+                        android:textSize="@dimen/face_depot_text_size" />
+                    <TextView
+                        android:id="@+id/start_time_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dip"
+                        android:text="选取开始时间"
+                        android:textSize="@dimen/face_depot_text_size"
+                        android:textColor="@color/home_text_select"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/end_time_ll"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/cloth_text_padding_left"
+                    android:paddingTop="9dip"
+                    android:paddingBottom="20dip"
+                    android:background="@drawable/cloth_alarm_bg_selector"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="结束时间"
+                        android:textSize="@dimen/face_depot_text_size"
+                        android:textColor="@color/detail_title"
+                        />
+                    <TextView
+                        android:id="@+id/end_time_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dip"
+                        android:text="选取结束时间"
+                        android:textSize="@dimen/face_depot_text_size"
+                        android:textColor="@color/home_text_select"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="抓拍点位"
+                android:layout_marginTop="18dip"
+                android:textColor="@color/tab_unselect_color"
+                android:visibility="gone"
+                android:textSize="11sp" />
+
+
+            <RadioGroup
+                android:id="@+id/area_rg"
+                android:layout_width="match_parent"
+                android:layout_height="35dip"
+                android:layout_marginTop="18dip"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/area_none_rb"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/cloth_alarm_bg_selector"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:textSize="13sp"
+                    android:text="不限"
+                    android:textColor="@color/home_text_selector" />
+
+                <RadioButton
+                    android:id="@+id/area_collect_rb"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/cloth_text_padding_left"
+                    android:layout_weight="1"
+                    android:background="@drawable/cloth_alarm_bg_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:textSize="13sp"
+                    android:text="我的关注"
+                    android:textColor="@color/home_text_selector" />
+
+                <View
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <View
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="布控人员库"
+                android:layout_marginTop="18dip"
+                android:textColor="@color/tab_unselect_color"
+                android:textSize="11sp" />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/depot_rclv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dip">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

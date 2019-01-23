@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/case_item_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+    >
+
+    <ImageView
+        android:id="@+id/new_item_iv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/case_import_iv_height"
+        android:scaleType="centerCrop"
+        />
+
+    <ImageView
+        android:id="@+id/import_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp16"
+        android:src="@drawable/ic_import_case"
+        />
+
+    <TextView
+        android:id="@+id/case_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/new_item_iv"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp16"
+        android:layout_marginRight="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp12"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp15"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/case_date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/case_title_tv"
+        android:layout_marginBottom="@dimen/dp12"
+        android:layout_marginLeft="@dimen/dp16"
+        android:layout_marginRight="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp12"
+        android:gravity="center_vertical"
+        android:text="2017.06.01"
+        android:textColor="@color/mine_text_color"
+        android:textSize="11sp"
+        />
+</RelativeLayout>

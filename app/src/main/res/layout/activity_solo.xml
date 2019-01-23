@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/solo_root"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="false"
+                android:keepScreenOn="true"
+                android:orientation="vertical"
+    >
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/solo_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:visibility="gone"
+        />
+
+
+    <RelativeLayout
+        android:id="@+id/control_up_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="190dp"
+        android:background="@color/yellow_ff9e36"
+        android:clickable="true"
+        >
+
+        <ImageView
+            android:id="@+id/live_streaming_logo_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="120dp"
+            android:background="@color/transparent"
+            android:src="@drawable/yidongyunyan_logo"
+            />
+
+        <TextView
+            android:id="@+id/tv_solo"
+            android:text="@string/solo"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp18"
+            android:layout_below="@id/live_streaming_logo_iv"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/connect_live_streaming_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_solo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:text="@string/solo_connecting_1_text"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:visibility="gone"
+            />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/yidongyunyan_cloud"
+            android:scaleType="fitXY"
+            android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/control_down_rl"
+        android:layout_width="match_parent"
+        android:layout_height="191dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:clickable="true"
+        >
+        <LinearLayout
+            android:id="@+id/bottom_ll"
+            android:layout_width="match_parent"
+            android:layout_height="130dip"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+            <ImageButton
+                android:id="@+id/back_ib"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dip"
+                android:paddingBottom="20dip"
+                android:background="@color/transparent"
+                android:scaleType="center"
+                android:src="@drawable/yidongyunyan_back"
+                />
+
+            <ImageButton
+                android:id="@+id/control_ib"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/transparent"
+                android:src="@drawable/ydyy_start_living"
+                />
+
+            <ImageView
+                android:id="@+id/solo_network_iv"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:src="@drawable/solo_living_icon"
+                android:visibility="invisible"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/control_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/bottom_ll"
+            android:text="@string/solo_start_text"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

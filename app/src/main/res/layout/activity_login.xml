@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dip"
+        android:background="@color/white"
+        />
+    <ImageView
+        android:id="@+id/top_logo_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:src="@drawable/lm_icon" />
+
+    <LinearLayout
+        android:id="@+id/mid_account_ll"
+        android:layout_below="@id/top_logo_iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:paddingLeft="37dp"
+        android:paddingRight="37dp">
+
+        <LinearLayout
+            android:id="@+id/ll_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="55dp"
+            android:visibility="visible"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/my_account_text"
+                android:textColor="@color/default_text_color"
+                android:textSize="14dp" />
+
+            <EditText
+                android:id="@+id/account_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical|left"
+                android:inputType="text"
+                android:hint="@string/plz_input_account_text"
+                android:textColorHint="@color/tab_unselect_color"
+                android:textSize="12sp" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/edit_text_bound_color" />
+
+        <LinearLayout
+            android:id="@+id/ll_psw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="55dp"
+            android:visibility="visible"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/my_password_text"
+                android:textColor="@color/default_text_color"
+                android:textSize="14dp" />
+
+            <EditText
+                android:id="@+id/password_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:background="@android:color/transparent"
+                android:inputType="textPassword"
+                android:gravity="center_vertical|left"
+                android:hint="@string/plz_input_pwd_error"
+                android:textColorHint="@color/tab_unselect_color"
+                android:textSize="12sp"
+                android:layout_weight="1"
+                />
+            <CheckBox
+                android:id="@+id/psw_eye_cb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="7dip"
+                android:button="@drawable/eye_psw_selector"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/edit_text_bound_color" />
+        <LinearLayout
+            android:id="@+id/local_adress_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="55dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/default_text_color"
+                android:textSize="14dp"
+                android:text="@string/login_local_address"
+                />
+            <TextView
+                android:id="@+id/address_local_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableRight="@drawable/right_arrow"
+                android:paddingRight="13dip"
+                android:paddingLeft="20dip"
+                android:gravity="center_vertical"
+                android:textColorHint="@color/tab_unselect_color"
+                android:textSize="12sp"
+                android:hint="@string/hint_choice_local_address"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/mid_account_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="37dp"
+            android:layout_marginRight="37dp"
+            android:layout_marginTop="70dp"
+            android:background="@color/home_text_select"
+            android:gravity="center"
+            android:text="立即登录"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="24dp"
+            android:text="@string/company_name"
+            android:visibility="visible"
+            android:textColor="@color/tab_unselect_color"
+            android:textSize="11sp" />
+    </RelativeLayout>
+</LinearLayout>

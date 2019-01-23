@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          android:layout_width="52dip"
+          android:layout_height="25dip"
+          android:background="@drawable/body_depot_color_bg_selector"
+          android:textColor="@color/selector_gray_yellow_check"
+          android:textSize="10sp"
+          android:gravity="center">
+
+</TextView>

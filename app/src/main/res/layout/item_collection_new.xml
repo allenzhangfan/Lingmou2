@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_root"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp122"
+        android:background="@color/white">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv"
+            android:layout_width="@dimen/dp160"
+            android:layout_height="@dimen/dp90"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp16"
+            app:cardCornerRadius="@dimen/dp2"
+            app:cardElevation="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:id="@+id/tv_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp40"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/cloud_step_collect_item_bg"
+                    android:gravity="bottom"
+                    android:paddingBottom="@dimen/dp4"
+                    android:paddingLeft="@dimen/dp4"
+                    android:text="在线"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp12" />
+
+                <RelativeLayout
+                    android:id="@+id/offline_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_eeeeee"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawablePadding="@dimen/dp10"
+                        android:drawableTop="@drawable/camera_offline"
+                        android:gravity="center"
+                        android:text="当前设备离线" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_marginRight="@dimen/dp16"
+            android:layout_marginTop="@dimen/dp18"
+            android:layout_toRightOf="@+id/cv"
+            android:ellipsize="end"
+            android:lines="2"
+            android:textColor="@color/gray_424242"
+            android:textSize="@dimen/sp15"
+            tools:text="关山大道保利国际中心15F B区办公区" />
+
+
+        <View
+            android:id="@+id/view_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_marginRight="@dimen/dp16"
+            android:background="@color/comment_divide_line_color" />
+    </RelativeLayout>
+</LinearLayout>

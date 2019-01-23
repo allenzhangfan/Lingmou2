@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:orientation="vertical">
+
+    <SurfaceView
+        android:id="@+id/surfaceview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ProgressBar
+        android:id="@+id/progressbar_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:orientation="vertical"
+        android:paddingRight="10dip">
+
+        <ImageView
+            android:id="@+id/menu_collect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dip"
+            android:src="@drawable/video_uncollected" />
+
+        <ImageView
+            android:id="@+id/menu_sound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dip"
+            android:src="@drawable/sound_on" />
+
+        <ImageView
+            android:id="@+id/menu_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dip"
+            android:src="@drawable/ic_rec_uncheck" />
+
+        <ImageView
+            android:id="@+id/menu_capture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dip"
+            android:src="@drawable/icon_cam" />
+
+        <ImageView
+            android:id="@+id/menu_back_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dip"
+            android:src="@drawable/icon_playback" />
+
+        <ImageView
+            android:id="@+id/menu_back_live"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dip"
+            android:src="@drawable/icon_backtolive" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/record_buttom"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_gravity="bottom"
+        android:visibility="visible">
+
+        <!--录像日期-->
+        <HorizontalScrollView
+            android:id="@+id/date_rule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#88000000"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_gravity="top"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!--时间刻度尺-->
+        <cloud.antelope.lingmou.customview.MyHorizontalScrollView
+            android:id="@+id/my_horizontal_view"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/scale_height_sum"
+            android:layout_gravity="bottom">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/scale_height_sum"
+                android:background="#E5695143">
+
+                <ImageView
+                    android:id="@+id/scale_bg"
+                    android:layout_width="@dimen/scale_sum_real"
+                    android:layout_height="match_parent" />
+
+                <cloud.antelope.lingmou.customview.ScaleView
+                    android:id="@+id/horizontalScale"
+                    android:layout_width="@dimen/scale_sum"
+                    android:layout_height="@dimen/scale_height_sum"
+                    android:layout_below="@+id/horizontalScaleValue"
+                    zl:lf_scale_view_height="@dimen/scale_height"
+                    zl:lf_scale_view_max="720"
+                    zl:lf_scale_view_min="0" />
+            </FrameLayout>
+        </cloud.antelope.lingmou.customview.MyHorizontalScrollView>
+
+        <!--时刻指针-->
+        <TextView
+            android:id="@+id/key_frame"
+            android:layout_width="1px"
+            android:layout_height="@dimen/scale_height_sum"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="#fff" />
+    </FrameLayout>
+
+    <include
+        layout="@layout/activity_player_header"
+        android:visibility="visible"/>
+
+</FrameLayout>

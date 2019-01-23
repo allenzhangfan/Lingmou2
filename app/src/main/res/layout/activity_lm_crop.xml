@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/root_crop_rl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:background="@color/twenty_transparent_black"
+    >
+
+    <View
+        android:id="@+id/bg_view"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/yellow_ffb300"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dip"
+            >
+
+            <ImageView
+                android:id="@+id/back_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="15dip"
+                android:scaleType="center"
+                android:src="@drawable/back_btn_white"
+                />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/crop_card_view"
+            android:layout_width="300dip"
+            android:layout_height="300dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            app:cardCornerRadius="3dip"
+            app:cardElevation="10dip"
+            >
+
+            <cloud.antelope.lingmou.mvp.ui.widget.LmCropImageView
+                android:id="@+id/crop_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/hint_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dip"
+            android:gravity="center"
+            android:text="在上方调整图像将要识别的脸部处于显示框内"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:visibility="invisible"
+            />
+
+        <LinearLayout
+            android:id="@+id/recog_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageView
+                    android:id="@+id/ni_img"
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="50dp"
+                    android:src="@drawable/rotate_ni"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="80dip"
+                    android:layout_height="80dip"
+                    android:layout_centerInParent="true"
+                    >
+
+                    <ImageView
+                        android:id="@+id/recog_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"
+                        />
+
+                    <ImageView
+                        android:id="@+id/recog_start_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/face_recog_start"
+                        />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/shun_img"
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="50dp"
+                    android:src="@drawable/rotate_shun"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/recog_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="@string/start_recognize"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

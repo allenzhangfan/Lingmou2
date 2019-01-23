@@ -1,0 +1,498 @@
+<resources>
+    <string name="app_name">羚眸</string>
+
+    <string name="bugly_id">2a6e96dcfa</string>
+    <string name="share_sdk_appid">225923a989e2f</string>
+    <string name="share_sdk_appkey">3c51754fc7bff9daaedc44aa4ace2d02</string>
+
+    <string name="storage_subject">lingmou.clue</string>
+    <string name="storage_root_path">lingmou</string>
+
+    <string name="homepage">首页</string>
+    <string name="clue">线索</string>
+
+
+    <string name="forgot_pwd_text">忘记密码</string>
+    <string name="forgot_pwd_text_login_page">忘记密码?</string>
+
+    <string name="input_pwd_text">输入密码</string>
+    <string name="input_pwd_again_text">确认密码</string>
+    <string name="plz_input_account_text">请输入账号</string>
+    <string name="plz_input_phone_number_text">请输入手机号</string>
+
+    <string name="plz_input_sms_code_text">请输入验证码</string>
+    <string name="get_sms_code_text">点击获取验证码</string>
+    <string name="resend_sms_code_counter_text">重新发送(%1$ss)</string>
+    <string name="resend_sms_code_text">重新发送</string>
+
+
+    <!--(%1$ds)-->
+    <string name="policy_text">使用条款及隐私政策</string>
+    <string name="common_complete_text">完成</string>
+    <string name="login_pwd_text">请输入密码</string>
+    <string name="login_text">登录</string>
+    <string name="account_phone">账号/手机号</string>
+
+    <!-- Settings -->
+    <string name="mine">我的</string>
+    <string name="mine_settings_text">设置</string>
+    <string name="avatar_text">修改头像</string>
+    <string name="nickname_text">修改昵称</string>
+    <string name="nickname">昵称</string>
+    <string name="plz_input_nickname_text">请输入昵称</string>
+    <string name="my_account_text">账号</string>
+    <string name="my_phone_text">手机号</string>
+    <string name="my_password_text">密码</string>
+    <string name="my_verification_code">验证码</string>
+    <string name="modify_pwd_text">修改密码</string>
+    <string name="accept_msg_text">接收消息</string>
+    <string name="clear_cache_text">清除缓存</string>
+    <string name="about_text">关于</string>
+    <string name="update">更新至最新版本</string>
+
+    <string name="logout_text">退出登录</string>
+
+    <!-- Report -->
+
+    <string name="take_photo_text">拍照</string>
+    <string name="select_photo_text">从手机相册选择</string>
+
+    <string name="audio_permission">应用需要获取您的视频权限和地理位置权限</string>
+    <string name="camera_permission">应用需要获取您的摄像头信息</string>
+    <string name="location_permission">应用需要获取您的位置信息</string>
+    <string name="sdcard_write_permission">应用需要获取您SD卡的读写权限</string>
+
+    <string name="plz_input_pwd_error">请输入密码</string>
+    <string name="plz_input_verification_code">请输入验证码</string>
+    <string name="get_verification_code">获取验证码</string>
+
+    <string name="plz_pwd_twice_different_error">您两次输入的密码不一致，请重新输入</string>
+
+
+    <string name="my_setting_text">设置</string>
+    <string name="my_share_text">分享</string>
+
+
+    <string name="today">今天</string>
+
+    <string name="qq_share_ok">QQ好友分享成功</string>
+    <string name="qzone_share_ok">QQ空间分享成功</string>
+    <string name="wechat_share_ok">微信好友分享成功</string>
+    <string name="wechat_moments_share_ok">微信朋友圈分享成功</string>
+    <string name="share_canceled">取消分享</string>
+    <string name="share_failed">分享失败</string>
+
+    <string name="wechat_moments_text">微信朋友圈</string>
+    <string name="wechat_friends_text">微信好友</string>
+    <string name="qzone_text">QQ空间</string>
+    <string name="qq_friends_text">QQ好友</string>
+    <string name="upgrade">版本更新</string>
+
+    <string name="drop_out">请再按一次退出</string>
+
+
+    <string name="upgrade_text">立即更新</string>
+    <string name="clue_has_send_success">线索已送达</string>
+
+    <string name="network_disconnect">网络不给力</string>
+    <string name="network_connect_timeout">网络连接超时</string>
+    <string name="network_connect_fail">网络连接失败</string>
+    <string name="network_data_error">数据解析失败</string>
+    <string name="pwd_length_rule">请输入8到20位字母和数字组合的密码</string>
+
+    <string name="toast_avatar_has_change">头像已更换</string>
+    <string name="modify_nickname_success">昵称已修改</string>
+    <string name="unsupport_string">您输入的符号不支持</string>
+    <string name="need_camera_permission_tips">该应用需要开启摄像机的权限</string>
+    <string name="request_permission_tag">申请权限</string>
+    <string name="can_not_use_camera">无法开启摄像机</string>
+    <string name="need_read_sdcard_permission_tips">该应用需要读写存储设备的权限</string>
+    <string name="need_permission_tips">该应用需要相关权限</string>
+    <string name="can_not_read_picture">无法读写照片</string>
+    <string name="need_location_permission_tips">该应用需要获取定位的权限</string>
+    <string name="can_not_get_location">无法获取定位</string>
+    <string name="need_audio_permission_tips">该应用需要录音的权限</string>
+    <string name="can_not_use_audio">无法开启录音</string>
+
+    <string name="media_play_complete">播放完成</string>
+    <string name="share_text">与我一起来当朝阳群众吧！</string>
+
+    <string name="sure_delete_title">"您确定要删除吗？"</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="err_phone_number_is_null">手机号不能为空</string>
+    <string name="err_phone_number_format_not_right">手机号格式不正确</string>
+    <string name="my_login_tips_text">登录/注册</string>
+    <string name="unknow_text">未知</string>
+    <string name="tip_loading">数据正在加载中。。。</string>
+    <string name="has_load_all_comment">已显示全部评论</string>
+    <string name="has_load_all_data">已显示全部数据</string>
+    <string name="loading_comment">正在加载中...</string>
+    <string name="load_failed">加载失败，请点我重试</string>
+    <string name="reset_password_success">重置密码成功</string>
+
+    <string name="image_save_to">图片已保存至：%1$s</string>
+    <string name="image_save_fail">保存失败！</string>
+
+    <string name="token_invalid">登录信息失效，\n请重新登录</string>
+    <string name="token_abate">您的账号已在其他设备登录，请重新登录!</string>
+    <string name="bad_gateway">服务器错误</string>
+
+    <string name="too_long_nick_name">您的昵称太长</string>
+    <string name="sure_to_logout">确定退出登录？</string>
+    <string name="logout">退出</string>
+    <string name="login_ing">正在登录中...</string>
+    <string name="get_sms_code_ing">获取验证码中...</string>
+    <string name="user_avatar_updating">头像更新中...</string>
+
+    <!-- 羚眸的string -->
+    <string name="home_video">视频</string>
+    <string name="home_application">应用</string>
+    <string name="home_mine">我的</string>
+    <string name="no_more_data">已经全部加载完毕</string>
+    <string name="my_clue">我的线索</string>
+    <string name="message_receive">推送通知</string>
+    <string name="clean_cache">清理缓存</string>
+    <string name="feedback">意见反馈</string>
+    <string name="header">头像</string>
+    <string name="login_password">登录密码</string>
+    <string name="modify_login_password">修改密码</string>
+    <string name="account_and_safty">账号与安全</string>
+    <string name="hint_input_current_password">请输入当前密码</string>
+    <string name="hint_input_new_password">6~18位以字母开头的字母,数字,_组合</string>
+    <string name="error_input_old_password">请输入旧密码</string>
+    <string name="error_input_new_password">请输入新密码</string>
+    <string name="error_input_length_password">密码为6~18位以字母开头的字母,数字,_组合</string>
+    <string name="commit">提交</string>
+    <string name="search_hint_text">请输入您需要搜索的内容</string>
+    <string name="play_help">帮助反馈</string>
+    <string name="load_fail_refresh">刷新重试</string>
+    <string name="network_tip">当前网络状况不佳，请检查网络设置</string>
+    <string name="camera_liquidity">流畅</string>
+    <string name="error_no_videos">暂无回放视频</string>
+    <string name="hint_video_complete">视频已播放完毕</string>
+    <string name="video_event_expire">当前视频无法观看</string>
+
+    <string name="go_setting">去设置</string>
+    <string name="permisson_storage">此应用需要获取sd卡读写权限!</string>
+    <string name="storage_title">读取权限</string>
+    <string name="storage_message">此应用需要获取存储卡的读取权限！</string>
+    <string name="see_video_2_3_4">您正在使用2G/3G/4G网络观看</string>
+    <string name="empty_conver">今天没有录像哦~\n拖动时间轴看看其他日期吧</string>
+    <string name="record_type">回放</string>
+    <string name="camera_onffline">该摄像头离线</string>
+    <string name="organization_structure">视频资源</string>
+    <string name="no_history_search">暂无搜索记录</string>
+    <string name="no_search_result">暂无搜索结果</string>
+    <string name="no_content">暂无数据</string>
+    <string name="face_result">识别结果</string>
+
+    <string name="face_person_name_type">预警人员：%1$s　　人员类型：%2$s</string>
+    <string name="face_person_time">抓拍时间：%1$s</string>
+    <string name="face_person_address">抓拍地点：%1$s</string>
+    <string name="face_person_score">相似度：%1$s</string>
+    <string name="error_no_organization">暂无下级目录</string>
+    <string name="updating">更新中...</string>
+    <string name="hint_feedback_success">反馈成功</string>
+    <string name="hint_check_updating">检查更新中...</string>
+    <string name="solo_start_text">开始</string>
+    <string name="end_solo_text">结束</string>
+    <string name="solo_connecting_1_text">视频连线中.</string>
+    <string name="solo_connecting_2_text">视频连线中..</string>
+    <string name="solo_connecting_3_text">视频连线中...</string>
+    <string name="solo_connecting_success_text">视频连接成功</string>
+    <string name="streamer_open_fail">开启视频流失败</string>
+    <string name="solo_start_service_fail">启动云服务失败</string>
+    <string name="solo_exit_living_text">是否退出直播</string>
+    <string name="likeCamera">正在更改状态...</string>
+    <string name="has_favorite_text">取消关注</string>
+    <string name="favorite_text">关注</string>
+    <string name="favorite_device">关注设备</string>
+    <string name="unknow_camera">未知摄像机名称</string>
+    <string name="fail_to_login_device">启动单兵功能失败</string>
+    <string name="search_camera_fail">获取摄像机失败</string>
+    <string name="company_name">武汉灵达科技有限公司</string>
+    <string name="collect_success">关注成功</string>
+    <string name="uncollect_success">取消关注成功</string>
+    <string name="collect_fail">关注失败</string>
+    <string name="uncollect_fail">取消关注失败</string>
+    <string name="error_psw_not_same">两次新密码输入不一致</string>
+    <string name="cloth_control_alarm">布控报警</string>
+    <string name="hint_input_content">请输入内容</string>
+
+    <string name="tip_no_news">暂无警务新闻</string>
+    <string name="tip_load_fail">数据加载失败，请下拉刷新</string>
+    <string name="tip_no_network_to_pull">网络不给力，请下拉刷新</string>
+    <string name="column_not_exist">栏目不存在</string>
+    <string name="police_news">警务新闻</string>
+
+    <string name="tip_comment">留言将由管理员筛选后显示，对所有人可见。</string>
+    <string name="comment_send_success">提交成功</string>
+    <string name="all_comment_title">全部评论</string>
+    <string name="comment_label">评论</string>
+    <string name="tip_no_comment">暂无评论，期待您的留言</string>
+    <string name="click_load_more">点击加载更多</string>
+
+    <string name="report_max_length_limit">线索不能超过%1$s个字</string>
+    <string name="report_min_length_limit">线索不能少于%1$s个字</string>
+    <string name="comment_max_length_limit">评论不能超过%1$s个字</string>
+    <string name="comment_min_length_limit">评论不能少于%1$s个字</string>
+
+    <string name="submit_comment_hint">发表您的想法吧...</string>
+
+    <string name="detail_tag">详情</string>
+    <string name="image_download_url_error">图片下载地址错误</string>
+    <string name="send">发送</string>
+    <string name="see_big_image_fail">查看大图失败！</string>
+    <string name="save_image">保存图片</string>
+    <string name="save_image_success">已保存至本地</string>
+    <string name="recognize_qr">识别图中二维码</string>
+    <string name="loading_clue_is_sending">正在发送,请耐心等待</string>
+    <string name="report_et_hint_text">发生了什么事情?</string>
+    <string name="common_send_text">提交</string>
+    <string name="plz_input_report_desc_text">请输入线索信息！</string>
+    <string name="get_address">正在获取地址...</string>
+    <string name="loading_clue_is_compressing">图片或视频压缩中...</string>
+    <string name="take_photo_or_video_text">拍摄</string>
+    <string name="send_clue_fail_msg">提交线索失败</string>
+    <string name="send_clue_success">提交线索成功</string>
+    <string name="exit">退出</string>
+    <string name="exit_edit">放弃此条线索？</string>
+    <string name="submit_case">线索上传</string>
+    <string name="report_address_text">线索地址</string>
+    <string name="get_lat_lng">获取经纬度失败</string>
+    <string name="face_depot_title">人脸图库</string>
+    <string name="empty_text">暂无查询结果</string>
+    <string name="empty_network_text">获取数据失败，刷新重试</string>
+    <string name="empty_data_text">暂无数据</string>
+    <string name="search_image">以图搜图</string>
+    <string name="solo_broadcast">移动云眼</string>
+    <string name="my_collection">我的关注</string>
+    <string name="body_depot_title">人体图库</string>
+
+    <string name="tip_no_clue">你当前没有提交线索哦！</string>
+    <string name="colume_not_exist">栏目不存在</string>
+    <string name="no_permission">无权限</string>
+    <string name="clue_time_text">时间：%1$s</string>
+    <string name="clue_address_text">地址：%1$s</string>
+    <string name="clue_detail">线索详情</string>
+    <string name="person_track">人员轨迹</string>
+    <string name="person_track_query">轨迹查询</string>
+    <string name="zoom_to_max">已放大至最高级别</string>
+    <string name="zoom_to_min">已缩小至最低级别</string>
+    <string name="error_face_recog_null">没有查询到数据</string>
+    <string name="error_face_recog_fail">识别失败</string>
+    <string name="fail_load_picture">图片加载失败</string>
+    <string name="tracker_query">查询轨迹</string>
+    <string name="trackers">轨迹</string>
+    <string name="hint_select_tracker_images">请选择要查询轨迹的图片</string>
+    <string name="hint_no_lat_lng_image">当前图片不可选中</string>
+
+    <string name="page_content_title">%1$d / %2$d</string>
+    <string name="start_recognize">开始识别</string>
+    <string name="recognizing">识别中</string>
+    <string name="tip_no_case">暂时没有新闻发布哦！</string>
+    <string name="victory_show">战果展示</string>
+    <string name="error_obtain_clue_detail">线索获取失败，请返回刷新重试</string>
+    <string name="error_no_permission">操作无权限</string>
+    <string name="hint_no_org_videos">暂无视频资源</string>
+    <string name="hint_no_permission">没有权限</string>
+    <string name="error_obtain_face_feature">提取人脸特征失败</string>
+    <string name="login_local_address">归属地</string>
+    <string name="hint_choice_local_address">请选择归属地</string>
+    <string name="error_no_local_address">未获取到归属地信息，请重启应用</string>
+    <string name="hint_not_more_seven_days">时间跨度不能超过7天!</string>
+    <string name="hint_not_more_three_days">时间跨度不能超过3天!</string>
+    <string name="hint_end_day_less_start_day">结束时间必须大于开始时间!</string>
+    <string name="get_code_time_remaining">重新获取验证码%d秒</string>
+    <string name="err_msg_code_is_null">验证码不能为空</string>
+    <string name="use_account_and_psw_login">使用账号密码登录</string>
+    <string name="use_verification_code_login">使用短信验证码登录</string>
+    <string name="send_msg_code_again">重新发送验证码</string>
+    <string name="account_login">账号登录</string>
+    <string name="password">密码</string>
+    <string name="agreement1">登录即代表同意</string>
+    <string name="agreement2">《智慧云眼用户协议》</string>
+    <string name="select_operating_center">选择运营中心</string>
+    <string name="message_code_tip">请输入验证码，\n已将短信验证码（免费）发送至手机\n%s</string>
+    <!--<string name="message_code_tip">检测到账户存在风险，\n已将短信验证码（免费）发送至手机\n%s</string>-->
+    <string name="send_msg_code_remain">%d秒后可以重新发送</string>
+
+    <string name="home_item_video">云视</string>
+    <string name="home_item_map">云图</string>
+    <string name="home_item_search">云搜</string>
+    <string name="home_item_app">云服</string>
+    <string name="home_item_personal">个人</string>
+
+    <string name="history">历史</string>
+    <string name="my_message">我的消息</string>
+    <string name="my_favorite">我的收藏</string>
+    <string name="no_message_tip">你还没有消息喔～</string>
+    <string name="no_collection_tip">你还没有收藏喔～</string>
+    <string name="map_tip">资源列表移到这里来啦</string>
+    <string name="my_bottom_sheet_behavior">cloud.antelope.lingmou.mvp.ui.widget.MyBottomSheetBehavior</string>
+    <string name="filter_term">筛选条件</string>
+    <string name="filter">筛选</string>
+    <string name="event_video">事件视频</string>
+    <string name="search_by_picture">以图搜图</string>
+    <string name="title_source_picture">抓拍图片</string>
+    <string name="daily">日常</string>
+    <string name="workbench">工作台</string>
+    <string name="control_scope">范围</string>
+    <string name="control_status">状态</string>
+    <string name="control_management">人员追踪</string>
+    <string name="start_time_">开始时间</string>
+    <string name="end_time_">结束时间</string>
+    <string name="remark_">备注</string>
+    <string name="show_detail">设备详情</string>
+    <string name="pause_mission">暂停任务</string>
+    <string name="delete_mission">删除任务</string>
+    <string name="mission_detail">任务详情</string>
+    <string name="mission_name_">任务名称</string>
+    <string name="deploy_mission_name">布控任务名称</string>
+    <string name="mission_status_">任务状态</string>
+    <string name="mission_remark">任务备注</string>
+    <string name="deploy_mission_remark_hint">请输入任务备注信息…</string>
+    <string name="save">保存</string>
+    <string name="valid_alarm">有效告警</string>
+    <string name="invalid_alarm">无效告警</string>
+    <string name="undo_alarm">待处理</string>
+    <string name="threshold_">阈值</string>
+    <string name="select_upload_mode">选择上传方式</string>
+    <string name="input_mission_name_hint">请填写任务名称</string>
+    <string name="input_threshold_hint">请选择任务阈值</string>
+    <string name="input_start_time_hint">请选择任务开始时间</string>
+    <string name="input_end_time_hint">请选择任务结束时间</string>
+    <string name="create">创建</string>
+    <string name="create_temporary_mission">创建人员追踪</string>
+    <string name="all">全部</string>
+    <string name="underway">进行中</string>
+    <string name="paused">已暂停</string>
+    <string name="expired">已过期</string>
+    <string name="reset">重置</string>
+    <string name="alarm_range">告警范围</string>
+    <string name="alarm_type">告警类型</string>
+    <string name="alarm_state">告警状态</string>
+    <string name="alarm_time">告警时间</string>
+    <string name="collect">收藏</string>
+    <!--<string name="control">临控</string>-->
+    <string name="download">下载</string>
+    <string name="download_picture">下载图片</string>
+    <string name="control_picture">收藏图片</string>
+    <string name="cancel_collect">取消收藏</string>
+    <string name="add_control">创建追踪任务</string>
+    <string name="control_key_person">重点人员</string>
+    <string name="control_person">追踪人员</string>
+    <string name="foreign_person">外来人员</string>
+    <string name="ghost">魅影</string>
+    <string name="integrated_machine">魅影</string>
+    <string name="valid">有效</string>
+    <string name="invalid">无效</string>
+    <string name="bukong_picture">布控图片</string>
+    <string name="zhuapai_picture">抓拍图片</string>
+    <string name="similarity_dot">相似度</string>
+    <string name="real_time_video">实时视频</string>
+    <string name="history_time_video">历史视频</string>
+    <string name="device_range">设备范围</string>
+    <string name="device_type">设备类型</string>
+    <string name="device_state">设备状态</string>
+    <string name="offline">离线</string>
+    <string name="online">在线</string>
+    <string name="snapshot_time">抓拍时间</string>
+    <string name="choice_start_time">选择开始时间</string>
+    <string name="start_time">开始时间</string>
+    <string name="choice_end_time">选择结束时间</string>
+    <string name="end_time">结束时间</string>
+    <string name="start_mission">开始任务</string>
+    <string name="mission_expired">任务已过期，重新布控</string>
+    <string name="not_start">未开始</string>
+    <string name="not_start_mission">更改开始时间，开始布控</string>
+    <string name="rebuild_mission">重新布控</string>
+    <string name="time_set_error_tip">开始时间必须大于结束时间！</string>
+    <string name="search_hint">请输入你需要搜索的内容</string>
+    <string name="jurisdiction_alert">辖区告警</string>
+    <string name="jurisdiction_vidio">辖区视频</string>
+    <string name="device_detail_info">设备详情</string>
+    <string name="show_device_detail_info">查看设备详情</string>
+    <string name="alarm_detail_info">告警详情</string>
+    <string name="range">范围</string>
+    <string name="gender">性别</string>
+    <string name="alarm_address">抓拍场所</string>
+    <string name="focused_devices">关注的设备</string>
+    <string name="collected_picture">收藏的图片</string>
+    <string name="collected_alert">收藏的告警</string>
+    <string name="tracking_task">追踪任务</string>
+    <string name="tracking_people">追踪的人员</string>
+    <string name="watch_history">历史观看</string>
+    <string name="face_picture">人脸图片</string>
+    <string name="body_picture">人体图片</string>
+    <string name="vidio_snapshot">视频截图</string>
+    <string name="created_task">创建的任务</string>
+    <string name="face_depot">人脸库</string>
+    <string name="body_depot">人体库</string>
+    <string name="cloud_search">云搜</string>
+    <string name="collect_cancel_success">取消收藏成功！</string>
+    <string name="collect_confirm_success">收藏成功！</string>
+    <string name="collect_cancel_fail">取消收藏失败！</string>
+    <string name="collect_confirm_fail">收藏失败！</string>
+    <string name="hint_no_device_latlong">暂无位置信息！</string>
+    <string name="track_person">人员追踪</string>
+    <string name="person_tracking">追踪人员</string>
+    <string name="other_more_wait">敬请期待</string>
+    <string name="error_offline_play_fail">当前设备离线中，请检查设备后重试</string>
+    <string name="error_only_play_fail">播放失败，请重试</string>
+    <string name="see_source_picture">查看原图</string>
+    <string name="map_location">地图点位</string>
+    <string name="device_information">设备信息</string>
+    <string name="police_search_hint">设备关键字、任务名称...</string>
+    <string name="show_history_video">事件视频</string>
+    <string name="logout_tip">您的账号在其它移动设备登录，如果这不是您的操作，请及时修改您的密码。</string>
+    <string name="choice_play_time">选择播放时间</string>
+    <string name="cloud_search_hint">设备关键字、SN码、任务名称…</string>
+    <string name="device_search_hint">设备关键字、SN码…</string>
+    <string name="deploy_search_hint">任务名称…</string>
+    <string name="face_record">人脸记录</string>
+    <string name="body_record">人体记录</string>
+    <string name="broadcast">智慧广播</string>
+    <string name="detail_info">详细信息</string>
+    <string name="capture_address">抓拍地点</string>
+    <string name="capture_device">抓拍设备</string>
+    <string name="similar_picture">相似图片</string>
+    <string name="newest">最新</string>
+    <string name="similarity">相似度</string>
+    <string name="plate_color">车牌颜色</string>
+    <string name="car_plate">车牌</string>
+    <string name="device">设备</string>
+    <string name="car_color">车辆颜色</string>
+    <string name="car_type">车辆类型</string>
+    <string name="time_frame">时间段</string>
+    <string name="more">更多</string>
+    <string name="car_brand">车辆品牌</string>
+    <string name="car_depot">车辆图库</string>
+    <string name="search_car_hint">请输入车辆品牌</string>
+    <string name="all_brand">全部品牌</string>
+    <string name="search_event_remind_hint">请输入布控任务名称</string>
+    <string name="event_remind">事件提醒</string>
+    <string name="event_detail">事件详情</string>
+    <string name="unsettled">未处理</string>
+    <string name="valid_event">有效事件</string>
+    <string name="invalid_event">无效事件</string>
+    <string name="device_address">设备地址</string>
+    <string name="alert_detail_remark_hint">请输入告警备注信息…</string>
+    <string name="search_result">搜索结果</string>
+    <string name="not_wifi_tip">正在使用移动网络，播放将产生流量费用</string>
+    <string name="play_anyway">继续播放</string>
+    <string name="usual_brand">常用品牌</string>
+    <string name="search_car_depot_hint">请输入车牌号或设备关键字或SN码</string>
+    <string name="cancel_select">取消选择</string>
+    <string name="select_all">全选</string>
+    <string name="outside_person">外来人员</string>
+    <string name="private_network_suite">专网套件</string>
+    <string name="update_info">更新说明</string>
+    <string name="not_wifi_notice">移动网络播放时提醒</string>
+    <string name="solo">单兵直播</string>
+    <string name="unknown_location">未知地理位置</string>
+
+
+    <!--<string name="police_tip">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;当发生刑事(治安)，火灾，交通等灾害事故，或遇到危难等紧急情况时，可以拨打110报警、求助。</string>-->
+</resources>

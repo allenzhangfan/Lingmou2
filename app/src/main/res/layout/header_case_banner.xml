@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <com.youth.banner.Banner
+        android:id="@+id/case_banner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/case_banner_iv_height"
+        android:background="@color/white"
+        app:indicator_drawable_selected="@drawable/selected_radius"
+        app:indicator_drawable_unselected="@drawable/unselected_radius"
+        app:indicator_height="7dp"
+        app:indicator_margin="4dp"
+        app:indicator_width="7dp"
+        app:layout_id="@layout/layout_case_banner"
+        />
+
+    <LinearLayout
+        android:id="@+id/victory_ll"
+        android:layout_width="match_parent"
+        android:layout_height="65dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="15dip"
+        android:background="@color/white"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/victory_show"
+            />
+
+        <ViewFlipper
+            android:id="@+id/victory_ts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:flipInterval="2700"
+            android:inAnimation="@anim/anim_marquee_in"
+            android:outAnimation="@anim/anim_marquee_out"
+            android:layout_marginLeft="12dip"
+            >
+
+        </ViewFlipper>
+    </LinearLayout>
+</LinearLayout>

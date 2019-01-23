@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/network_tip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:background="#eeffffff"
+    android:layout_height="30dp">
+
+    <TextView
+        android:drawableLeft="@drawable/icon_exclamation"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:text="@string/network_tip"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:drawablePadding="5dp"
+        android:textSize="10sp"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/net_work_cancle"
+        android:src="@drawable/clear_edit"
+        android:scaleType="centerInside"
+        android:layout_width="70dp"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

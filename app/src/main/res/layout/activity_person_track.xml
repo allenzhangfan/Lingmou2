@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical"
+    >
+
+    <include layout="@layout/include_head_item"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/a_half_dp"
+        android:background="@color/home_divider_lint"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <com.amap.api.maps.MapView
+            android:id="@+id/map_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingBottom="18dp"
+            android:paddingLeft="@dimen/card_padding"
+            android:paddingRight="@dimen/card_padding"
+            />
+
+        <LinearLayout
+            android:layout_width="37dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="312dp"
+            android:layout_marginRight="18dp"
+            android:background="@drawable/camera_map_btn_bg"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/zoom_in_iv"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:background="@color/transparent"
+                android:padding="11dp"
+                android:src="@drawable/zoom_in"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/a_half_dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:background="@color/home_divider_lint"
+                />
+
+            <ImageView
+                android:id="@+id/zoom_out_iv"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:background="@color/transparent"
+                android:padding="11dp"
+                android:src="@drawable/zoom_out"
+                />
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/compass_iv"
+            android:layout_width="@dimen/dp36"
+            android:layout_height="@dimen/dp36"
+            android:layout_below="@+id/ll_search"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_marginTop="@dimen/dp16"
+            android:src="@drawable/compass_icon" />
+        <LinearLayout
+            android:id="@+id/marker_list_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/top_border_shadow"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:id="@+id/marker_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginLeft="9dp"
+                android:gravity="center_vertical"
+                android:text="此点位共抓拍4张"
+                android:textColor="@color/default_text_color"
+                android:textSize="11sp"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        >
+
+        <include layout="@layout/include_head_item"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/a_half_dp"
+            android:background="@color/home_divider_lint"
+            />
+
+        <ImageView
+            android:id="@+id/about_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp48"
+            android:background="@drawable/about_us"
+            />
+
+
+        <TextView
+            android:id="@+id/app_version_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp16"
+            android:text="V1.0.0"
+            android:textColor="@color/gray_616161"
+            android:textSize="@dimen/sp16"
+            />
+
+        <TextView
+            android:id="@+id/call_service_btn"
+            android:layout_width="@dimen/dp160"
+            android:layout_height="@dimen/dp40"
+            android:background="@drawable/about_stroke_rect"
+            android:gravity="center"
+            android:text="联系客服"
+            android:textColor="@color/gray_616161"
+            android:textSize="@dimen/sp14"
+            />
+        <TextView
+            android:id="@+id/btn_update_info"
+            android:layout_width="@dimen/dp160"
+            android:layout_height="@dimen/dp40"
+            android:layout_marginTop="@dimen/dp8"
+            android:background="@drawable/about_stroke_rect"
+            android:gravity="center"
+            android:text="@string/update_info"
+            android:textColor="@color/gray_616161"
+            android:textSize="@dimen/sp14"
+            />
+
+        <TextView
+            android:id="@+id/law_btn"
+            android:layout_width="@dimen/dp160"
+            android:layout_height="@dimen/dp40"
+            android:layout_marginTop="@dimen/dp8"
+            android:background="@drawable/about_stroke_rect"
+            android:gravity="center"
+            android:text="法律条款"
+            android:textColor="@color/gray_616161"
+            android:textSize="@dimen/sp14"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/version_update_btn"
+            android:layout_width="@dimen/dp160"
+            android:layout_height="@dimen/dp40"
+            android:layout_marginTop="@dimen/dp8"
+            android:background="@drawable/about_stroke_rect"
+            android:gravity="center"
+            android:text="版本更新"
+            android:layout_marginBottom="@dimen/dp40"
+            android:textColor="@color/yellow_ff8f00"
+            android:textSize="@dimen/sp14"
+            />
+
+    </LinearLayout>
+</LinearLayout>

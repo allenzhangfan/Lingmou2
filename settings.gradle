@@ -1,0 +1,6 @@
+include ':app', ':arms', ':lib_ImagePicker', ':lib_Camera', ':android-common2',
+        ':lib_Litepal', ':lib_ViewPagerIndicator', ":lib_StickyItemDecoration", ':lib_Banner',
+        ':lib_FlowLayout'
+
+project(':android-common2').projectDir = new File('../android-common2')
+

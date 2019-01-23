@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dp16"
+                android:paddingRight="@dimen/dp16"
+                android:paddingTop="20dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="12dp"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:id="@+id/talk_time_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="12dp"
+            android:layout_marginRight="52dp"
+            android:layout_marginTop="8dp"
+            android:text="2017-04-03 "
+            android:textColor="@color/edit_text_hint_color"
+            android:textSize="12sp"
+            android:gravity="center"
+            />
+        <TextView
+            android:id="@+id/re_user_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="1dp"
+            android:text="朝阳群众的大爷"
+            android:textColor="@color/mine_text_color"
+            android:textSize="13sp"
+            android:gravity="right"
+            />
+        <TextView
+            android:id="@+id/talk_content_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/clue_talk_right_bg"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            />
+
+
+    </LinearLayout>
+
+    <cloud.antelope.lingmou.mvp.ui.widget.CircleImageView
+        android:id="@+id/user_avatar_cv_right"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/default_avatar"
+        android:layout_marginTop="40dip"
+        app:border_color="@color/my_divider_bg_grey"
+        app:border_width="0.5dp"
+        />
+</LinearLayout>

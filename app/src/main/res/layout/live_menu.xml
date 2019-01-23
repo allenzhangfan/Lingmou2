@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:layout_marginTop="90dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageButton
+        android:id="@+id/collect_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dip"
+        android:background="@color/transparent"
+        android:clickable="false"
+        android:enabled="false"
+        android:src="@drawable/video_uncollected" />
+
+    <CheckBox
+        android:id="@+id/play_audio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:button="@drawable/sound_on"
+        android:checked="true"
+        android:clickable="true"
+        android:enabled="false"
+        android:padding="10dp" />
+
+    <CheckBox
+        android:id="@+id/play_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:button="@drawable/ic_rec"
+        android:checked="true"
+        android:clickable="true"
+        android:enabled="false"
+        android:padding="10dp"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/play_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:button="@drawable/cam_bg"
+        android:clickable="true"
+        android:enabled="false"
+        android:padding="10dp"
+        android:visibility="visible" />
+
+    <CheckBox
+        android:id="@+id/play_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:button="@drawable/playback_bg"
+        android:clickable="true"
+        android:enabled="false"
+        android:padding="10dp"
+        android:visibility="visible" />
+
+    <CheckBox
+        android:id="@+id/play_live"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:button="@drawable/back_to_live"
+        android:clickable="true"
+        android:enabled="false"
+        android:padding="10dp"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/replay_ib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/replay_selector"
+        android:enabled="false"
+        android:visibility="gone" />
+
+</LinearLayout>

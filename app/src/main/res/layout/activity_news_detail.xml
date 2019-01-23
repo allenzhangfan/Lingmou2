@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/root_detail_ll"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg_app"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical"
+    >
+
+    <include layout="@layout/include_head_item"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/a_half_dp"
+        android:background="@color/home_divider_lint"
+        />
+
+    <cloud.antelope.lingmou.mvp.ui.widget.loadmore.SwipeRefreshLayoutFinal
+        android:id="@+id/swipe_refresh_widget"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <cloud.antelope.lingmou.mvp.ui.widget.loadmore.ScrollViewFinal
+            android:id="@+id/detail_scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            >
+
+            <LinearLayout
+                android:id="@+id/main_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <!--<com.netposa.cyqz.customview.X5WebView-->
+                <!--android:id="@+id/detail_webview"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@color/base_bg_white"-->
+                <!--/>-->
+
+                <!--<com.netposa.cyqz.customview.loadmore.RecyclerViewFinal-->
+                <!--android:id="@+id/comment_rv"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@color/base_bg_white"-->
+                <!--android:visibility="gone"-->
+                <!--app:loadMoreMode="scroll"-->
+                <!--/>-->
+
+                <ProgressBar
+                    android:id="@+id/load_pbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:indeterminateOnly="false"
+                    android:max="100"
+                    android:progressDrawable="@drawable/progress_bar_states"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/empty_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="95dp"
+                        android:background="@drawable/no_network_icon"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:text="@string/tip_no_network_to_pull"
+                        android:textColor="@color/edit_text_hint_color"
+                        android:textSize="@dimen/sp14"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+        </cloud.antelope.lingmou.mvp.ui.widget.loadmore.ScrollViewFinal>
+    </cloud.antelope.lingmou.mvp.ui.widget.loadmore.SwipeRefreshLayoutFinal>
+
+    <LinearLayout
+        android:id="@+id/comment_tool_bar_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/comment_tv"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_comment_edit"
+            android:ellipsize="end"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center_vertical"
+            android:hint="@string/submit_comment_hint"
+            android:maxLines="1"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textColorHint="@color/edit_text_hint_color"
+            android:textSize="13sp"
+            />
+
+        <ImageView
+            android:id="@+id/see_comment_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_bottom_case_comment"
+            />
+
+        <RelativeLayout
+            android:id="@+id/thumb_up_rl"
+            android:layout_width="58dp"
+            android:layout_height="46dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="10dp"
+            >
+
+            <TextView
+                android:id="@+id/thumb_up_number_tv"
+                android:layout_width="24dp"
+                android:layout_height="12dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/btn_thumb_up_number"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="9sp"
+                />
+
+            <ImageView
+                android:id="@+id/thumb_up_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="14dp"
+                android:enabled="false"
+                android:src="@drawable/btn_thumb_up"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

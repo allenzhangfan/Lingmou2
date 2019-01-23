@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/dp2"
+        app:cardElevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp164"
+            android:layout_height="@dimen/dp164"
+           >
+            <cloud.antelope.lingmou.mvp.ui.widget.RectImageView
+                android:id="@+id/iv"
+                android:layout_width="@dimen/dp164"
+                android:layout_height="@dimen/dp164"
+                />
+
+            <TextView
+                android:id="@+id/tv_similarity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp8"
+                android:background="@drawable/shape_similarity_bg"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp4"
+                android:paddingRight="@dimen/dp4"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp11"
+                tools:text="95%" />
+
+            <ImageView
+                android:id="@+id/cb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/dp8"
+                android:src="@drawable/selector_checkbox_yellow"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp4"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/gray_212121"
+        android:textSize="@dimen/sp14"
+        tools:text="保利国际中心15L" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray_616161"
+        android:textSize="@dimen/sp12"
+        tools:text="08-08 12:24:47" />
+</LinearLayout>

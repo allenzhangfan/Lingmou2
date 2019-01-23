@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ss="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_head_item" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/mine_divider_line_color" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/cloth_margin_left_right"
+        android:layout_marginTop="18dip"
+        android:text="默认时间范围"
+        android:textColor="@color/tab_unselect_color"
+        android:textSize="@dimen/sp12"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp44"
+        android:layout_marginLeft="@dimen/dp8"
+        android:layout_marginRight="@dimen/dp8"
+        android:layout_marginTop="@dimen/dp20">
+
+        <TextView
+            android:id="@+id/tv_3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp8"
+            android:layout_marginRight="@dimen/dp8"
+            android:layout_weight="1"
+            android:background="@drawable/selector_filter_select"
+            android:gravity="center"
+            android:text="3天"
+            android:textColor="@color/selector_gray_yellow_select"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/tv_7"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp8"
+            android:layout_marginRight="@dimen/dp8"
+            android:layout_weight="1"
+            android:background="@drawable/selector_filter_select"
+            android:gravity="center"
+            android:text="7天"
+            android:textColor="@color/selector_gray_yellow_select"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/tv_15"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp8"
+            android:layout_marginRight="@dimen/dp8"
+            android:layout_weight="1"
+            android:background="@drawable/selector_filter_select"
+            android:gravity="center"
+            android:text="15天"
+            android:textColor="@color/selector_gray_yellow_select"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/tv_30"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp8"
+            android:layout_marginRight="@dimen/dp8"
+            android:layout_weight="1"
+            android:background="@drawable/selector_filter_select"
+            android:gravity="center"
+            android:text="30天"
+            android:textColor="@color/selector_gray_yellow_select"
+            android:textSize="@dimen/sp14" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/cloth_margin_left_right"
+        android:layout_marginTop="@dimen/dp16"
+        android:text="自定义时间范围"
+        android:textColor="@color/tab_unselect_color"
+        android:textSize="@dimen/sp12"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp64"
+        android:layout_marginLeft="@dimen/cloth_margin_left_right"
+        android:layout_marginRight="@dimen/cloth_margin_left_right"
+        android:layout_marginTop="12dip"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/start_time_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_rect_corner_5_f7f7f7"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开始时间"
+                    android:textColor="@color/detail_title"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/start_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dip"
+                    android:text="选取开始时间"
+                    android:textColor="@color/yellow_ff8f00"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_start_time_choice"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_rect_corner_5_f7f7f7"
+                android:gravity="center"
+                android:text="选择开始时间"
+                android:textColor="@color/gray_424242"
+                android:textSize="@dimen/sp14" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dip"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/end_time_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_rect_corner_5_f7f7f7"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="结束时间"
+                    android:textColor="@color/detail_title"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/end_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dip"
+                    android:text="选取结束时间"
+                    android:textColor="@color/yellow_ff8f00"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_end_time_choice"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_rect_corner_5_f7f7f7"
+                android:gravity="center"
+                android:text="选择结束时间"
+                android:textColor="@color/gray_424242"
+                android:textSize="@dimen/sp14" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/cloth_margin_left_right"
+        android:layout_marginTop="@dimen/dp16"
+        android:text="@string/similarity"
+        android:textColor="@color/tab_unselect_color"
+        android:textSize="@dimen/sp12"
+        android:textStyle="bold" />
+
+    <cloud.antelope.lingmou.mvp.ui.widget.SimilaritySeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp16"
+        android:layout_marginRight="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp8"
+        ss:default_value="85"
+        ss:max_value="100"
+        ss:min_value="60" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/mine_divider_line_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/clean_tv"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/reset"
+            android:textColor="@color/yellow_ff8f00"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/cofirm_tv"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/yellow_ff8f00"
+            android:gravity="center"
+            android:text="@string/confirm"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

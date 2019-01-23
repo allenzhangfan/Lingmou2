@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="danbing_str_visible" >
+        <item>火眼金睛</item>
+        <item>布控报警</item>
+        <item>单兵直播</item>
+        <item>人脸图库</item>
+        <item>线索上传</item>
+        <item>警务新闻</item>
+    </string-array>
+    <string-array name="danbing_str_gone" >
+        <item>火眼金睛</item>
+        <item>布控报警</item>
+        <item>人脸图库</item>
+        <item>线索上传</item>
+        <item>警务新闻</item>
+        <item>单兵直播</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp48"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="20dip">
+
+            <TextView
+                android:id="@+id/favorite_tv"
+                android:layout_width="60dip"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/favorite_text"
+                android:textColor="@color/color_cloud_eye_deep"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/history_tv"
+                android:layout_width="60dip"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/history"
+                android:textColor="@color/default_text_color"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <cloud.antelope.lingmou.mvp.ui.widget.IndicatorView
+            android:id="@+id/indicatorView"
+            android:layout_marginLeft="20dp"
+            app:line_color="@color/color_cloud_blue_divider"
+            app:single_width="25dp"
+            android:layout_width="120dp"
+            android:layout_height="3dp" />
+
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/cloud_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+</LinearLayout>

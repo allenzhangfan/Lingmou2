@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+    >
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/collect_srfl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/collect_rclv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+        </android.support.v7.widget.RecyclerView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/empty_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:drawablePadding="18dip"
+        android:drawableTop="@drawable/cloud_no_data"
+        android:gravity="center"
+        android:text="你还没有关注哦~"
+        android:textColor="@color/detail_title"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/empty_no_network_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:drawablePadding="30dip"
+        android:drawableTop="@drawable/no_internet"
+        android:gravity="center"
+        android:text="@string/empty_network_text"
+        android:textColor="@color/detail_title"
+        android:visibility="gone"
+        />
+</RelativeLayout>

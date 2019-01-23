@@ -1,0 +1,11 @@
+<resources>
+
+    <style name="ImageTranslucentTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <!--<item name="android:windowTranslucentStatus">true</item>-->
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:fitsSystemWindows">false</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="android:windowAnimationStyle">@style/AnimaActivity</item>
+    </style>
+
+</resources>

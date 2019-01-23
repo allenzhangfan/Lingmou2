@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">羚眸</string>
+    <string name="company_name">武汉灵达科技有限公司</string>
+    <string name="search_image">羚眸辨脸</string>
+    <string name="solo_broadcast">单兵直播</string>
+    <string name="bugly_id">2a6e96dcfa</string>
+    <string name="share_sdk_appid">225923a989e2f</string>
+    <string name="share_sdk_appkey">3c51754fc7bff9daaedc44aa4ace2d02</string>
+    <string name="storage_subject">lingmou.clue</string>
+    <string name="storage_root_path">lingmou</string>
+
+</resources>

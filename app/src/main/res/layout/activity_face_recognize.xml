@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/face_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:padding="@dimen/dp14"
+            android:scaleType="centerInside"
+            android:src="@drawable/back_btn_black" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/face_result"
+            android:textColor="@color/gray_212121"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/track_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dp10"
+            android:src="@drawable/trail_track" />
+
+        <ImageView
+            android:id="@+id/filter_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dp10"
+            android:src="@drawable/filter" />
+
+        <TextView
+            android:id="@+id/confirm_track_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="@dimen/dp10"
+            android:text="@string/confirm"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp17"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingBottom="20dip"
+            android:paddingLeft="18dip"
+            android:paddingRight="18dip"
+            android:paddingTop="20dip">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/old_cardview"
+                android:layout_width="0dip"
+                android:layout_height="150dip"
+                android:layout_marginEnd="@dimen/dp9"
+                android:layout_weight="1"
+                app:cardCornerRadius="2dip"
+                app:cardElevation="3dip">
+
+                <ImageView
+                    android:id="@+id/person_old_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp40"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/cloud_step_collect_item_bg" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="@dimen/dp3"
+                    android:text="上传图片"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp12" />
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/right_cardview"
+                android:layout_width="0dip"
+                android:layout_height="150dip"
+                android:layout_marginStart="@dimen/dp9"
+                android:layout_weight="1"
+                app:cardCornerRadius="2dip"
+                app:cardElevation="3dip">
+
+                <ImageView
+                    android:id="@+id/person_select_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp40"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/cloud_step_collect_item_bg" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="@dimen/dp3"
+                    android:text="对比图片"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp12" />
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/gray_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp4"
+            android:background="@color/gray_f7f7f7"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <RadioGroup
+                android:id="@+id/recog_order_rg"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:background="@color/transparent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+
+                <RadioButton
+                    android:id="@+id/recog_time_rb"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawablePadding="10dip"
+                    android:drawableRight="@drawable/arrow_down_selector"
+                    android:gravity="center"
+                    android:paddingLeft="50dip"
+                    android:paddingRight="50dip"
+                    android:text="时间倒序"
+                    android:textColor="@color/selector_gray_yellow_check" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dip"
+                    android:layout_marginTop="5dip"
+                    android:background="@color/login_divide_line_color" />
+
+
+                <RadioButton
+                    android:id="@+id/recog_score_rb"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawablePadding="10dip"
+                    android:drawableRight="@drawable/arrow_down_selector"
+                    android:gravity="center"
+                    android:paddingLeft="50dip"
+                    android:paddingRight="50dip"
+                    android:text="比分高低"
+                    android:textColor="@color/selector_gray_yellow_check" />
+
+            </RadioGroup>
+
+            <RelativeLayout
+                android:id="@+id/detail_ll"
+                android:layout_width="match_parent"
+                android:layout_height="100dip"
+                android:layout_marginLeft="@dimen/dp16"
+                android:layout_marginRight="@dimen/dp16"
+                android:background="@drawable/shape_rect_stroke_5_corner"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/mid_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp16"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <cloud.antelope.lingmou.mvp.ui.widget.CircleProgressNewView
+                        android:id="@+id/score_progress"
+                        android:layout_width="@dimen/dp55"
+                        android:layout_height="@dimen/dp55"
+                        app:new_circle_width="@dimen/dp4"
+                        app:new_end_color="@color/alarm_progress_front_new_end"
+                        app:new_head_color="@color/alarm_progress_front_new_head"
+                        app:new_score_color="@color/black_222"
+                        app:new_score_size="@dimen/sp20" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp4"
+                        android:gravity="center"
+                        android:text="@string/similarity_dot"
+                        android:textColor="@color/gray_9e9e9e"
+                        android:textSize="@dimen/sp12" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/show_detail_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dip"
+                    android:layout_marginBottom="@dimen/dp16"
+                    android:layout_marginLeft="@dimen/dp16"
+                    android:layout_marginTop="@dimen/dp16"
+                    android:layout_toStartOf="@id/mid_ll"
+                    android:background="@drawable/face_text_bg"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/person_name_type_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/sp14" />
+
+                    <TextView
+                        android:id="@+id/person_time_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/sp14" />
+
+                    <TextView
+                        android:id="@+id/person_address_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/show_detail"
+                        android:textColor="@color/yellow_ff8f00"
+                        android:textSize="@dimen/sp12" />
+
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/gray_split_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/answer_list_divide_line"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/face_rclv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="18dip"
+                android:paddingRight="18dip"
+                android:paddingTop="8dip">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:id="@+id/empty_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingTop="20dip"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="160dip"
+                    android:layout_height="160dip"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/cloud_no_data" />
+
+                <TextView
+                    android:id="@+id/tv_empty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray_9e9e9e"
+                    android:textSize="@dimen/sp13"
+                    android:text="无查询结果" />
+                <Button
+                    android:id="@+id/btn_change_filter"
+                    android:text="更换条件"
+                    android:textSize="@dimen/sp14"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="@dimen/dp16"
+                    android:background="@drawable/shape_rect_corner_4_yellow"
+                    android:layout_width="@dimen/dp88"
+                    android:layout_height="@dimen/dp36" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp49"
+        android:background="@drawable/shape_rect"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp16"
+            android:text="全选"
+            android:textColor="@color/yellow_ff8f00"
+            android:textSize="@dimen/sp16" />
+
+        <TextView
+            android:id="@+id/tv_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp8"
+            android:layout_weight="1"
+            android:text="已选择0张"
+            android:textColor="@color/gray_9e9e9e"
+            android:textSize="@dimen/sp12" />
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="@dimen/dp125"
+            android:layout_height="match_parent"
+            android:background="@color/yellow_ffa000"
+            android:gravity="center"
+            android:text="@string/confirm"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp16" />
+    </LinearLayout>
+</LinearLayout>

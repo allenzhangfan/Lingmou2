@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:keepScreenOn="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/play_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+    <!--loading.....封面-->
+    <include
+        layout="@layout/player_conver"/>
+
+    <!--重连封面-->
+    <include
+        layout="@layout/player_restart_conver"
+        android:visibility="gone"
+        />
+
+
+    <!--网络提示-->
+    <include
+        layout="@layout/playe_network_tip"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="bottom"
+        android:visibility="gone"
+        />
+
+    <ViewStub
+        android:id="@+id/header_view_stub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:gravity="center_horizontal"
+        android:inflatedId="@+id/menu"
+        android:layout="@layout/live_menu"
+        android:orientation="vertical"
+        />
+
+    <include
+        layout="@layout/activity_player_header"
+        android:visibility="visible"
+        />
+
+    <RelativeLayout
+        android:id="@+id/record_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dip"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/record_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="00:00:00"
+            android:textColor="@color/white"
+            />
+
+        <ImageView
+            android:id="@+id/record_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="6dip"
+            android:layout_toLeftOf="@id/record_time_tv"
+            android:src="@drawable/record_red_dot"
+            />
+    </RelativeLayout>
+
+
+</FrameLayout>

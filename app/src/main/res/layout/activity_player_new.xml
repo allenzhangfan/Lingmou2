@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+    >
+    <SurfaceView
+        android:id="@+id/playerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <ImageView
+        android:id="@+id/cover_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/half_transparent_black"
+        />
+    <LinearLayout
+        android:id="@+id/layout_play_failed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        >
+        <TextView
+            android:id="@+id/play_fail_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/error_only_play_fail"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/fail_retry_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:background="@drawable/shape_rect_half_cornor_ffa000"
+            android:drawableLeft="@drawable/play_fail_refresh"
+            android:drawablePadding="@dimen/dp7"
+            android:paddingBottom="@dimen/dp6"
+            android:paddingLeft="@dimen/dp12"
+            android:paddingRight="@dimen/dp12"
+            android:paddingTop="@dimen/dp6"
+            android:text="@string/load_fail_refresh"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_4g_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        >
+        <TextView
+            android:id="@+id/tv_4g_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/not_wifi_tip"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/tv_play_anyway"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:background="@drawable/shape_rect_half_cornor_ffa000"
+            android:drawableLeft="@drawable/play_fail_refresh"
+            android:drawablePadding="@dimen/dp7"
+            android:paddingBottom="@dimen/dp6"
+            android:paddingLeft="@dimen/dp12"
+            android:paddingRight="@dimen/dp12"
+            android:paddingTop="@dimen/dp6"
+            android:text="@string/play_anyway"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!--  顶部半透明标题栏  -->
+
+    <LinearLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dip"
+        android:paddingBottom="13dip"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="@drawable/half_transparent_shadow_top">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            >
+            <ImageView
+            android:id="@+id/tv_exit_fullscreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:src="@drawable/back_btn_white" />
+            <TextView
+                android:id="@+id/tv_player_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="middle"
+                android:maxLength="20"
+                android:singleLine="true"
+                android:text="Title"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+            <LinearLayout
+                android:id="@+id/tool_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <ImageView
+                    android:id="@+id/collect_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/add_follow_yellow"
+                    android:padding="10dip"
+                    />
+
+                <ImageView
+                    android:id="@+id/capture_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/screenshot"
+                    android:padding="10dip"
+                    />
+                <ImageView
+                    android:id="@+id/iv_back_record"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/history_video"
+                    android:padding="10dip"
+                    />
+                <ImageView
+                    android:id="@+id/iv_back_live"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/video_live"
+                    android:padding="10dip"
+                    android:visibility="gone"
+                    />
+                <ImageView
+                    android:id="@+id/iv_sound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/video_voice_mute_selector"
+                    android:padding="10dip"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="40dip"
+            >
+
+            <View
+                android:id="@+id/video_status_view"
+                android:layout_width="4dip"
+                android:layout_height="4dip"
+                android:background="@drawable/blue_dot_bg"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_player_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dip"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="直播"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_bitrate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="right"
+                android:text="| 0kbps"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/record_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_top"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/record_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="00:00:00"
+            android:textColor="@color/white"
+            />
+
+        <ImageView
+            android:id="@+id/record_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="6dip"
+            android:layout_toLeftOf="@id/record_time_tv"
+            android:src="@drawable/record_red_dot"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_network_notice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/half_transparent_shadow_top"
+        android:padding="10dp"
+        android:text="您正在使用2G/3G/4G网络观看"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:visibility="gone"/>
+    <LinearLayout
+        android:id="@+id/slide_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dip"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:id="@+id/video_face_iv"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:src="@drawable/video_face_library"
+            android:scaleType="centerInside"
+            android:padding="3dip"
+            />
+
+        <ImageView
+            android:id="@+id/video_body_iv"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_marginTop="8dip"
+            android:src="@drawable/video_body_library"
+            android:padding="3dip"
+            />
+    </LinearLayout>
+    <ViewStub
+        android:id="@+id/record_view_stub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inflatedId="@+id/record_stub_rl"
+        android:layout_alignParentBottom="true"
+        android:layout="@layout/view_record_horizontal_scrollview"
+        />
+</RelativeLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@color/bg_app"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical"
+    >
+
+    <include layout="@layout/include_head_item"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/a_half_dp"
+        android:background="@color/home_divider_lint"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/a_half_dp"
+        android:background="@color/home_divider_lint"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/base_bg_white"
+        android:fillViewport="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <EditText
+                android:id="@+id/report_desc_et"
+                android:layout_width="match_parent"
+                android:layout_height="128dp"
+                android:background="@color/base_bg_white"
+                android:gravity="top"
+                android:hint="@string/report_et_hint_text"
+                android:maxLength="140"
+                android:paddingLeft="@dimen/dp16"
+                android:paddingTop="@dimen/dp16"
+                android:textColor="@color/edit_text_color"
+                android:textColorHint="@color/edit_text_hint_color"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/sp15"
+                />
+
+            <LinearLayout
+                android:id="@+id/adf_fangqu_ll"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:background="@color/base_bg_white"
+                android:orientation="vertical"
+                android:padding="10dp"
+                >
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/upload_images_rw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:choiceMode="singleChoice"
+                    android:divider="@null"
+                    android:fadingEdge="none"
+                    android:listSelector="@android:color/transparent"
+                    android:scrollbarStyle="outsideOverlay"
+                    android:scrollbars="vertical"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/a_half_dp"
+        android:background="@color/my_divider_bg_grey"
+        />
+
+    <RelativeLayout
+        android:id="@+id/location_area"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/base_bg_white"
+        android:gravity="center_vertical"
+        >
+
+        <!--<ImageView-->
+        <!--android:id="@+id/location_icon_iv"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="16dp"-->
+        <!--android:background="@drawable/ic_coordinate"-->
+        <!--/>-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_coordinate"
+            android:drawablePadding="8dp"
+            android:paddingLeft="16dp"
+            android:text="地点"
+            android:textColor="@color/default_text_color"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/location_address_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="16dp"
+            android:drawablePadding="8dp"
+            android:drawableRight="@drawable/right_arrow"
+            android:ellipsize="start"
+            android:maxWidth="275dp"
+            android:singleLine="true"
+            android:text="@string/get_address"
+            android:textColor="@color/edit_text_color"
+            android:textSize="12sp"
+            />
+
+        <ProgressBar
+            android:id="@+id/loading_progress"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="12dp"
+            android:layout_toLeftOf="@id/location_address_tv"
+            android:indeterminateDrawable="@drawable/progress_small_white"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

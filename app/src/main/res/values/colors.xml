@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#36A8FF</color>
+    <color name="primary_dark">#36A8FF</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="secondary_text">#727272</color>
+    <color name="bg_app">#F2F2F2</color>
+
+    <color name="tab_default_text_color">#333333</color>
+    <color name="seventy_white">#aaffffff</color>
+
+    <color name="my_divider_bg_grey">#EBEBEB</color>
+    <color name="base_divider_bg_grey">#dadada</color>
+    <color name="base_bg_white">#FFFFFF</color>
+    <color name="login_btn_unenabled_color">#4da9ff</color>
+
+    <color name="settings_value_color">#BFBFBF</color>
+
+    <color name="edit_text_bound_color">#dddddd</color>
+    <color name="edit_text_bg_color">#f8f9ff</color>
+
+    <color name="edit_text_color">#333333</color>
+    <color name="edit_text_hint_color">#999999</color>
+    <color name="login_divide_line_color">#eeeeee</color>
+    <color name="login_btn_enabled_color">#36A8FF</color>
+
+
+    <color name="sms_code_color">#0066FF</color>
+
+    <color name="mine_text_color">#666666</color>
+    <color name="mine_divider_line_color">#cccccc</color>
+    <color name="transparent">#000000ff</color>
+    <color name="new_bounty_color">#999999</color>
+    <color name="banner_circle_color">#7d94f6</color>
+    <color name="detail_title">#333333</color>
+
+    <color name="black_de">#DE000000</color>
+
+    <color name="about_text">#666666</color>
+
+    <color name="tab_report_text">#fa8110</color>
+
+    <color name="text_color">#6b5c72</color>
+    <color name="dialog_divide_line">#EEEEEE</color>
+
+    <color name="version_text_color">#059AFF</color>
+    <color name="guide_unselect_color">#dddddd</color>
+
+    <!-- 羚眸 -->
+    <color name="home_text_select">#36A8FF</color>
+    <color name="home_frag_normal">#AAAAAA</color>
+    <color name="home_divider_lint">#E0E0E0</color>
+
+    <color name="search_bg_color">#f5f5f5</color>
+    <color name="search_cursor_color">#999999</color>
+    <color name="half_transparent_black">#7F000000</color>
+    <color name="twenty_transparent_black">#34000000</color>
+    <color name="sixty_transparent_black">#99000000</color>
+
+    <color name="face_bg">#090b0d</color>
+    <color name="face_bg_rect">#0CB0FD</color>
+    <color name="org_horiz_bg">#F7F7F7</color>
+
+    <color name="alarm_progress_bg">#e8e8e8</color>
+    <color name="alarm_progress_front_head">#ffb367</color>
+    <color name="alarm_progress_front_end">#ff556d</color>
+
+    <color name="comment_edit_bg">#E8E8E8</color>
+    <color name="comment_number_check_bg">#FF652F</color>
+    <color name="comment_number_uncheck_bg">#999999</color>
+
+    <color name="comment_divide_line_color">#EEEEEE</color>
+    <color name="report_address_text_color">#36A8FF</color>
+    <color name="valid_color">#40CE71</color>
+    <color name="color_blue_eighty">#cc36A8FF</color>
+
+    <color name="switch_button_unchecked_bg">#c5c5c5</color>
+
+    <color name="progress_score_color">#313131</color>
+    <color name="progress_score_semblance_color">#868686</color>
+
+    <color name="twenty_percent_black">#2f000000</color>
+
+    <color name="color_depot_yellow_">#FFF336</color>
+    <color name="color_depot_green">#53CE53</color>
+    <color name="color_depot_red">#FF0000</color>
+    <color name="color_depot_zi">#B041C4</color>
+    <color name="color_depot_zong">#9B4F26</color>
+    <color name="color_depot_zihong">#C73F9C</color>
+
+    <color name="eighty_transparent_white">#ccFFFFFF</color>
+
+    <color name="body_color_gray">#e5e5e5</color>
+    <color name="body_color_black">#111111</color>
+    <color name="body_color_green">#7bba3c</color>
+    <color name="body_color_blue">#1691c7</color>
+    <color name="body_color_red">#e53729</color>
+    <color name="body_color_zi">#9c43b2</color>
+    <color name="body_color_yellow">#fed633</color>
+    <color name="body_color_fen">#d82b8f</color>
+    <color name="body_color_cheng">#FF6100</color>
+    <color name="body_color_zong">#825e41</color>
+
+    <color name="color_msg_admin">#3D76AC</color>
+    <color name="answer_list_divide_line">#dddddd</color>
+    <color name="black_222">#222222</color>
+    <color name="blue_0080FF">#0080FF</color>
+    <color name="gray_ccc">#ccc</color>
+    <color name="gray_888">#888888</color>
+    <color name="gray_999">#999</color>
+    <color name="red_E91919">#e91919</color>
+    <color name="blue_660080FF">#660080ff</color>
+    <color name="blue_330080FF">#330080ff</color>
+    <color name="green_29CB97">#29CB97</color>
+    <color name="green_6629CB97">#6629CB97</color>
+    <color name="green_3329CB97">#3329CB97</color>
+
+    <color name="color_cloud_eye_deep">#262626</color>
+    <color name="color_cloud_blue_divider">#0080FF</color>
+    <color name="gray_666">#666</color>
+    <color name="gray_3366666">#33666666</color>
+    <color name="gray_262626">#262626</color>
+    <color name="gray_333">#333</color>
+    <color name="gray_bfbfbf">#bfbfbf</color>
+    <color name="blue_color">#FF1FB428</color>
+    <color name="yellow_color">#FFF7A319</color>
+    <color name="color_orange">#F7A114</color>
+    <color name="gray_ddd">#ddd</color>
+    <color name="gray_eee">#eee</color>
+
+    <color name="alarm_progress_new_bg">#e8e8e8</color>
+    <color name="alarm_progress_front_new_head">#FBD249</color>
+    <color name="alarm_progress_front_new_end">#F5A623</color>
+
+    <color name="color_valid_alarm">#1BB840</color>
+    <color name="color_undo_alarm">#FFC616</color>
+    <color name="color_filter_alarm_item_bg">#F9F9F9</color>
+
+
+    <color name="yellow_fff8E1">#FFF8E1</color>
+    <color name="yellow_ffc107">#FFC107</color>
+    <color name="yellow_ffb300">#FFB300</color>
+    <color name="yellow_ffa000">#FFA000</color>
+    <color name="yellow_ff8f00">#FF8F00</color>
+
+    <color name="green_e8f5e9">#E8F5E9</color>
+    <color name="green_4caf50">#4CAF50</color>
+    <color name="green_52c423">#52C423</color>
+    <color name="green_f6ffed">#F6FFED</color>
+    <color name="green_ebffd7">#EBFFD7</color>
+
+    <color name="cyan_e0f7fa">#E0F7FA</color>
+    <color name="cyan_26c6da">#26C6DA</color>
+
+    <color name="blue_e1f5fe">#E1F5FE</color>
+    <color name="blue_81d4fa">#81D4FA</color>
+    <color name="blue_03a9f4">#03A9F4</color>
+
+    <color name="red_f4ecec">#F4ECEC</color>
+    <color name="red_f48fb1">#F48FB1</color>
+    <color name="red_ec407a">#EC407A</color>
+    <color name="red_fff1f0">#FFF1F0</color>
+
+    <color name="purple_f3e5f5">#F3E5F5</color>
+    <color name="purple_ce93d8">#CE93D8</color>
+    <color name="purple_ab47bc">#AB47BC</color>
+    <color name="purple_ffeffd">#FFEFFD</color>
+
+    <color name="blue_gray_78909c">#78909C</color>
+
+    <color name="gray_f7f7f7">#F7F7F7</color>
+    <color name="gray_eeeeee">#EEEEEE</color>
+    <color name="gray_dddddd">#DDDDDD</color>
+    <color name="gray_9e9e9e">#9E9E9E</color>
+    <color name="gray_757575">#757575</color>
+    <color name="gray_616161">#616161</color>
+    <color name="gray_424242">#424242</color>
+    <color name="gray_212121">#212121</color>
+    <color name="gray_777">#777</color>
+    <color name="yellow_f7a114">#f7a114</color>
+    <color name="transparent20">#33000000</color>
+    <color name="yellow_fa8c16">#fa8c16</color>
+    <color name="red_ed0f2a">#ed0f2a</color>
+    <color name="yellow_ffd980">#ffd980</color>
+    <color name="transparent50">#80000000</color>
+    <color name="white90">#E6ffffff</color>
+    <color name="yellow_ffeccc">#FFECCC</color>
+    <color name="transparent80">#cc000000</color>
+    <color name="white20">#33ffffff</color>
+    <color name="transparent70">#b3000000</color>
+    <color name="white80">#ccffffff</color>
+    <color name="gray_626262">#626262</color>
+    <color name="yellow_ffaf0080">#CCFFA000</color>
+    <color name="yellow_fff8d9">#fff8d9</color>
+    <color name="gray_f0f1ff">#f0f1ff</color>
+    <color name="green_26C6DA">#26C6DA</color>
+    <color name="green_e0f7fa">#e0f7fa</color>
+    <color name="green_52c41a">#52c41a</color>
+    <color name="yellow_ff9e36">#ff9e36</color>
+</resources>

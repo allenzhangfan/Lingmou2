@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp48"
+        android:text="@string/select_operating_center"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp28" />
+
+    <ImageView
+        android:id="@+id/ib_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/dp40"
+        android:padding="@dimen/dp16"
+        android:src="@drawable/close" />
+
+    <ImageView
+        android:layout_width="@dimen/dp280"
+        android:layout_height="@dimen/dp280"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp96"
+        android:background="@drawable/china_map" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv"
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp192"
+        android:layout_marginBottom="@dimen/dp16"
+        android:layout_alignParentBottom="true" />
+
+
+</RelativeLayout>

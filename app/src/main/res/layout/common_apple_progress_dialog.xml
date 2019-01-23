@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    >
+
+    <RelativeLayout
+        android:layout_width="140dp"
+        android:layout_height="110dp"
+        android:background="@drawable/apple_dialog_bg"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        >
+
+        <cloud.antelope.lingmou.mvp.ui.widget.MDLoadingView
+            android:id="@+id/loadingView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@android:color/white"
+            android:layout_centerHorizontal="true"
+            app:bGradient="false"
+            app:circleWidth="3.0dp"
+            app:circleColor="@color/banner_circle_color" />
+
+        <TextView
+            android:id="@+id/common_progress_msg"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp14"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/loadingView"
+            android:singleLine="true"
+            android:textColor="@color/base_bg_white"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

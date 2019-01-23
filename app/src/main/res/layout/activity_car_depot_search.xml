@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp52"
+        android:background="@color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dp8"
+        android:paddingTop="@dimen/dp8">
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_toLeftOf="@+id/tv_cancel"
+            android:background="@drawable/shape_search"
+            android:gravity="center_vertical"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="@dimen/dp8"
+            android:singleLine="true"
+            android:textColor="@color/gray_212121"
+            android:textColorHint="@color/gray_9e9e9e"
+            android:textSize="@dimen/sp12"
+            android:hint="@string/search_car_depot_hint"
+            android:transitionName="searchText" />
+
+        <ImageView
+            android:id="@+id/iv_clear"
+            android:src="@drawable/icon_delete_selector"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp8"
+            android:layout_toLeftOf="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp16"
+            android:paddingRight="@dimen/dp16"
+            android:text="@string/cancel"
+            android:textColor="@color/yellow_ff8f00"
+            android:textSize="@dimen/sp17"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@+id/stl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:background="@color/white"
+        tl:tl_indicator_color="@color/yellow_ff8f00"
+        tl:tl_indicator_corner_radius="1dp"
+        tl:tl_indicator_gravity="BOTTOM"
+        tl:tl_indicator_height="2dp"
+        tl:tl_indicator_width_equal_title="true"
+        tl:tl_tab_space_equal="true"
+        tl:tl_textAllCaps="true"
+        tl:tl_textSelectColor="@color/yellow_ff8f00"
+        tl:tl_textUnselectColor="@color/gray_212121"
+        tl:tl_textsize="@dimen/sp14" />
+
+    <cloud.antelope.lingmou.mvp.ui.widget.CustomViewPager
+        android:id="@+id/vp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

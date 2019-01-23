@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toobar_layout"
+        layout="@layout/include_top_bar"
+        android:visibility="visible"/>
+    <RelativeLayout
+        android:id="@+id/face_rl"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:visibility="gone"
+        android:background="#090b0d">
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_back"
+            android:background="@color/transparent"
+            android:padding="14dip"
+            android:scaleType="centerInside"/>
+    </RelativeLayout>
+
+    <!-- <com.lzy.imagepicker.view.CropImageView
+         android:id="@+id/cv_crop_image"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"/>-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.lzy.imagepicker.view.CropImageView
+            android:id="@+id/cv_crop_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/loading_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dip"
+            android:visibility="invisible"
+            android:text="点击开始识别"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:layout_centerHorizontal="true"
+            />
+        <ImageButton
+            android:id="@+id/recognize_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dip"
+            android:layout_above="@id/loading_tv"
+            android:background="@color/transparent"
+            android:src="@drawable/face_recognize_btn"/>
+        <TextView
+            android:id="@+id/recog_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="60dip"
+            />
+    </RelativeLayout>
+
+    <!-- <com.lzy.imagepicker.view.crop.CropImageView2
+         android:id="@+id/cv_crop_image"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:background="#000"
+         custom:backgroundColor="#FFFFFB"
+         custom:cropMode="ratio_fit_image"
+         custom:frameColor="#86C166"
+         custom:frameStrokeWeight="1dp"
+         custom:guideColor="#AA86C166"
+         custom:guideShowMode="show_on_touch"
+         custom:guideStrokeWeight="1dp"
+         custom:handleColor="#86C166"
+         custom:handleShowMode="show_always"
+         custom:handleSize="8dp"
+         custom:minFrameSize="50dp"
+         custom:overlayColor="#AA1C1C1C"
+         custom:touchPadding="8dp"/>-->
+
+</LinearLayout>

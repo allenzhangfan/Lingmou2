@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/case_item_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+    >
+
+    <ImageView
+        android:id="@+id/new_item_iv"
+        android:layout_width="@dimen/case_one_iv_width"
+        android:layout_height="@dimen/case_one_iv_height"
+        android:layout_alignParentRight="true"
+        android:scaleType="centerCrop"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/case_one_iv_height"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="151dp"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/case_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp15"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/case_date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_vertical"
+            android:text="2017.06.01"
+            android:textColor="@color/mine_text_color"
+            android:textSize="11sp"
+            />
+
+    </RelativeLayout>
+</RelativeLayout>

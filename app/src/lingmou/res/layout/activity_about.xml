@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_app"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        >
+
+        <include layout="@layout/include_head_item"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/a_half_dp"
+            android:background="@color/home_divider_lint"
+            />
+
+        <ImageView
+            android:id="@+id/about_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="65dp"
+            android:background="@drawable/about_logo"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:text="@string/app_name"
+            android:textColor="@color/default_text_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/app_version_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="9dp"
+            android:text="V1.0.0"
+            android:textColor="@color/color_gray"
+            android:textSize="@dimen/sp14"
+            />
+
+        <Button
+            android:id="@+id/call_service_btn"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/about_stroke_rect_gray"
+            android:gravity="center"
+            android:text="联系客服"
+            android:textColor="@color/default_text_color"
+            android:textSize="14sp"
+            />
+
+        <Button
+            android:id="@+id/law_btn"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/about_stroke_rect_gray"
+            android:gravity="center"
+            android:text="法律条款"
+            android:textColor="@color/default_text_color"
+            android:textSize="14sp"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/version_update_btn"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/about_stroke_rect_blue"
+            android:gravity="center"
+            android:text="版本更新"
+            android:textColor="@color/home_text_select"
+            android:textSize="14sp"
+            />
+
+    </LinearLayout>
+</LinearLayout>

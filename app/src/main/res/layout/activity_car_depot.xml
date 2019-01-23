@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_head_item" />
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:elevation="0dp">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        app:layout_collapseMode="pin">
+
+                        <TextView
+                            android:id="@+id/tv_search"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp32"
+                            android:layout_marginBottom="@dimen/dp8"
+                            android:layout_marginLeft="@dimen/dp16"
+                            android:layout_marginRight="@dimen/dp16"
+                            android:layout_marginTop="@dimen/dp8"
+                            android:background="@drawable/shape_rect_corner_2_f7f7f7"
+                            android:drawableLeft="@drawable/search_grey"
+                            android:drawablePadding="@dimen/dp4"
+                            android:gravity="center_vertical"
+                            android:hint="@string/search_car_depot_hint"
+                            android:imeOptions="actionSearch"
+                            android:paddingLeft="@dimen/dp8"
+                            android:singleLine="true"
+                            android:textColor="@color/gray_616161"
+                            android:textColorHint="@color/gray_9e9e9e"
+                            android:textSize="@dimen/sp13"
+                            android:transitionName="searchText" />
+                    </RelativeLayout>
+
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/answer_list_divide_line" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp46"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/ll_range"
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.2"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_range"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:drawablePadding="@dimen/dp4"
+                                android:drawableRight="@drawable/arrow_down_normal"
+                                android:gravity="center"
+                                android:text="@string/range"
+                                android:textColor="@color/gray_212121"
+                                android:textSize="@dimen/sp13" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_plate_color"
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.2"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_plate_color"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:drawablePadding="@dimen/dp4"
+                                android:drawableRight="@drawable/arrow_down_normal"
+                                android:gravity="center"
+                                android:text="@string/plate_color"
+                                android:textColor="@color/gray_212121"
+                                android:textSize="@dimen/sp13" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_car_color"
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.2"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_car_color"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:drawablePadding="@dimen/dp4"
+                                android:drawableRight="@drawable/arrow_down_normal"
+                                android:gravity="center"
+                                android:text="@string/car_color"
+                                android:textColor="@color/gray_212121"
+                                android:textSize="@dimen/sp13" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_car_type"
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.2"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_car_type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:drawablePadding="@dimen/dp4"
+                                android:drawableRight="@drawable/arrow_down_normal"
+                                android:gravity="center"
+                                android:text="@string/car_type"
+                                android:textColor="@color/gray_212121"
+                                android:textSize="@dimen/sp13" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_filter"
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_filter"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="2dip"
+                                android:drawableLeft="@drawable/filter_black_small"
+                                android:gravity="center"
+                                android:text="@string/filter"
+                                android:textColor="@color/gray_212121"
+                                android:textSize="@dimen/sp13" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view_divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/answer_list_divide_line" />
+                </LinearLayout>
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/srl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="@dimen/dp8"
+                    android:paddingRight="@dimen/dp8">
+
+                </android.support.v7.widget.RecyclerView>
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/cloud_no_data" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dp12"
+                    android:text="@string/no_content"
+                    android:textSize="@dimen/dp16" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_no_network"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="100dp"
+                android:drawablePadding="18dip"
+                android:drawableTop="@drawable/no_internet"
+                android:gravity="center"
+                android:text="@string/empty_network_text"
+                android:textColor="@color/detail_title"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/shaixuan_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/filter_rclv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white" />
+
+                <include layout="@layout/popupwindow_car_depot" />
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.design.widget.CoordinatorLayout>
+</LinearLayout>

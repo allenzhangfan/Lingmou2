@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/report_default_item_root"
+                android:layout_width="match_parent"
+                android:layout_height="91dp"
+                android:background="@color/white"
+    >
+
+    <RelativeLayout
+        android:id="@+id/new_item_im_area"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dp"
+        >
+
+        <ImageView
+            android:id="@+id/new_item_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/place_holder_big_bitmap"
+            />
+
+
+        <ImageView
+            android:id="@+id/video_flag_iv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/dp6"
+            android:layout_marginRight="@dimen/dp10"
+            android:src="@drawable/video_icon"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/report_status_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/ic_clue_sent"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="124dp"
+        >
+
+        <TextView
+            android:id="@+id/report_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp12"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp15"
+            />
+
+        <ImageView
+            android:id="@+id/location_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp15"
+            android:src="@drawable/location_label"
+            />
+
+        <TextView
+            android:id="@+id/location_address_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp12"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@id/location_label"
+            android:ellipsize="middle"
+            android:maxWidth="140dp"
+            android:singleLine="true"
+            android:textColor="@color/mine_text_color"
+            android:textSize="11sp"
+            tools:text="高新管委会高新管委会高新管委会高新管委会高"
+            />
+
+        <TextView
+            android:id="@+id/report_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/dp12"
+            android:text="2016.03.15"
+            android:textColor="@color/mine_text_color"
+            android:textSize="@dimen/sp12"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

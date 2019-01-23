@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="tag_first">-10001</item>
+    <item type="id" name="tag_second">-10002</item>
+    <item type="id" name="text_view">-10000</item>
+    <item type="id" name="index">-10003</item>
+    <item type="id" name="pre_index">-10004</item>
+
+    <item type="id" name="app_bianlian">-10006</item>
+    <item type="id" name="app_bukong">-10007</item>
+    <item type="id" name="app_danbing">-10008</item>
+    <item type="id" name="app_renliantuku">-10009</item>
+    <item type="id" name="app_rentituku">-10011</item>
+    <item type="id" name="app_xiansuo">-10010</item>
+    <item type="id" name="app_jingwunews">-10010</item>
+
+
+    <item type="id" name="workbench_videos">-10020</item>
+    <item type="id" name="workbench_search_pic">-10021</item>
+    <item type="id" name="workbench_track_person">-10022</item>
+    <item type="id" name="workbench_face_depot">-10023</item>
+    <item type="id" name="workbench_body_depot">-10024</item>
+    <item type="id" name="workbench_event_remind">-10025</item>
+    <item type="id" name="workbench_broadcast">-10026</item>
+    <item type="id" name="workbench_other_more">-10027</item>
+    <item type="id" name="workbench_car_depot">-10028</item>
+    <item type="id" name="workbench_solo">-10029</item>
+
+
+    <item type="id" name="menu_device_detail_info">-2001</item>
+    <item type="id" name="menu_show_history_video">-2002</item>
+    <item type="id" name="menu_add_control">-2003</item>
+    <item type="id" name="menu_search_by_picture">-2004</item>
+</resources>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sb="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_f7f7f7"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white" />
+
+    <include layout="@layout/include_head_item" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp32"
+            android:layout_margin="@dimen/dp8"
+            android:background="@drawable/shape_rect_corner_2_f7f7f7"
+            android:drawableLeft="@drawable/search_grey"
+            android:drawablePadding="@dimen/dp4"
+            android:gravity="center_vertical"
+            android:hint="@string/search_car_hint"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="@dimen/dp8"
+            android:singleLine="true"
+            android:textColor="@color/gray_616161"
+            android:textColorHint="@color/gray_9e9e9e"
+            android:textSize="@dimen/sp14"
+            android:transitionName="searchText" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tv" />
+
+
+        <cloud.antelope.lingmou.mvp.ui.widget.SideBar
+            android:id="@+id/side_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingRight="@dimen/dp10"
+            sb:normalColor="@color/gray_616161"
+            sb:pressColor="@color/yellow_ff8f00"
+            sb:textSize="@dimen/sp12" />
+
+        <TextView
+            android:id="@+id/tv_dialog"
+            android:layout_width="@dimen/dp80"
+            android:layout_height="@dimen/dp80"
+            android:layout_centerInParent="true"
+            android:background="@drawable/shape_sidbar_dialog"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</LinearLayout>

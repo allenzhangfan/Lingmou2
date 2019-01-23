@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zl="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/record_stub_rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <!--<android.support.v7.widget.RecyclerView
+        android:id="@+id/date_recy_view"
+        android:layout_width="match_parent"
+        android:layout_height="26dip"
+        android:paddingRight="60dip"
+        android:background="#88000000"
+        >
+
+    </android.support.v7.widget.RecyclerView>-->
+
+    <!--时间刻度尺-->
+    <LinearLayout
+        android:id="@+id/ll_left"
+        android:layout_width="@dimen/dp40"
+        android:layout_height="@dimen/dp64"
+        android:background="@color/transparent70"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotation="180"
+            android:src="@drawable/regular_right" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_right"
+        android:layout_width="@dimen/dp40"
+        android:layout_height="@dimen/dp64"
+        android:layout_toLeftOf="@+id/ll_menu"
+        android:background="@color/transparent70"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/regular_right" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_menu"
+        android:layout_width="@dimen/dp40"
+        android:layout_height="@dimen/dp64"
+        android:layout_alignParentRight="true"
+        android:background="@color/transparent70"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/time_picker" />
+    </LinearLayout>
+
+    <cloud.antelope.lingmou.mvp.ui.widget.MyHorizontalScrollView
+        android:id="@+id/my_horizontal_view"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/scale_height_sum"
+        android:layout_gravity="bottom"
+        android:layout_toLeftOf="@+id/ll_right"
+        android:layout_toRightOf="@+id/ll_left"
+        >
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/scale_height_sum"
+            android:background="@color/transparent70">
+
+            <ImageView
+                android:id="@+id/scale_bg"
+                android:layout_width="@dimen/scale_sum_real"
+                android:layout_height="match_parent" />
+
+            <cloud.antelope.lingmou.mvp.ui.widget.ScaleView
+                android:id="@+id/horizontalScale"
+                android:layout_width="@dimen/scale_sum"
+                android:layout_height="wrap_content"
+                zl:lf_scale_view_height="@dimen/scale_height"
+                zl:lf_scale_view_max="720"
+                zl:lf_scale_view_max_height="@dimen/dp16"
+                zl:lf_scale_view_min="0" />
+        </FrameLayout>
+    </cloud.antelope.lingmou.mvp.ui.widget.MyHorizontalScrollView>
+
+    <!--时刻指针-->
+    <TextView
+        android:id="@+id/key_frame"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/scale_height_sum"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/time_line" />
+</RelativeLayout>

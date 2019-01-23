@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp48"
+        android:text="@string/account_login"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp28" />
+
+    <ImageView
+        android:id="@+id/ib_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp6"
+        android:layout_marginTop="@dimen/dp46"
+        android:padding="@dimen/dp10"
+        android:src="@drawable/selector_location" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/til_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginLeft="@dimen/dp16"
+        android:layout_marginRight="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp50"
+        android:theme="@style/TextInputLayoutTheme"
+        app:errorTextAppearance="@style/LoginErrorTheme"
+        app:hintTextAppearance="@style/LoginHintTheme">
+
+        <EditText
+            android:id="@+id/et_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_et_bg"
+            android:hint="@string/account_phone"
+            android:maxLines="1"
+            android:paddingBottom="@dimen/dp10"
+            android:paddingTop="@dimen/dp10"
+            android:textSize="@dimen/sp18"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray_888"
+            android:textCursorDrawable="@drawable/edittext_cursor"
+            />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <cloud.antelope.lingmou.mvp.ui.widget.DashView
+        android:id="@+id/dv_account"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/til_account"
+        android:layout_marginLeft="@dimen/dp16"
+        android:layout_marginRight="@dimen/dp16"
+        app:base_color="@color/gray_ccc"
+        android:layout_marginTop="-1dp"
+        app:solid_color="@color/yellow_ffb300" />
+
+    <TextView
+        android:id="@+id/tv_account_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/til_account"
+        android:layout_marginRight="@dimen/dp24"
+        android:layout_marginTop="@dimen/dp16"
+        android:text="请输入8-20位字母、数字组合"
+        android:textColor="@color/red_E91919"
+        android:textSize="@dimen/sp12"
+        android:visibility="gone" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/til_psw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/til_account"
+        android:layout_marginLeft="@dimen/dp16"
+        android:layout_marginRight="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp16"
+        android:theme="@style/TextInputLayoutTheme"
+        app:errorTextAppearance="@style/LoginErrorTheme"
+        app:hintTextAppearance="@style/LoginHintTheme"
+        app:passwordToggleDrawable="@drawable/eye_psw_selector"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_et_bg"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:textSize="@dimen/sp18"
+            android:paddingBottom="@dimen/dp10"
+            android:paddingTop="@dimen/dp10"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray_888"
+            android:textCursorDrawable="@drawable/edittext_cursor" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <cloud.antelope.lingmou.mvp.ui.widget.DashView
+        android:id="@+id/dv_password"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/til_psw"
+        android:layout_marginLeft="@dimen/dp16"
+        android:layout_marginRight="@dimen/dp16"
+        app:base_color="@color/gray_ccc"
+        android:layout_marginTop="-1dp"
+        app:solid_color="@color/yellow_ffb300" />
+
+    <TextView
+        android:id="@+id/tv_password_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/til_psw"
+        android:layout_marginRight="@dimen/dp24"
+        android:layout_marginTop="@dimen/dp16"
+        android:text="请输入8-20位字母、数字组合"
+        android:textColor="@color/red_E91919"
+        android:textSize="@dimen/sp12"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp48"
+        android:layout_below="@+id/til_psw"
+        android:layout_marginLeft="@dimen/dp16"
+        android:layout_marginRight="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp64"
+        android:background="@drawable/shape_login_normal"
+        android:gravity="center"
+        android:text="@string/login_text"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp16" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp16"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/agreement1"
+            android:textColor="@color/gray_999"
+            android:textSize="@dimen/sp12" />
+
+        <TextView
+            android:id="@+id/tv_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/agreement2"
+            android:textColor="@color/blue_0080FF"
+            android:textSize="@dimen/sp12" />
+    </LinearLayout>
+</RelativeLayout>

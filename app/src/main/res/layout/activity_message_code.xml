@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg_white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_head_item" />
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp16"
+        android:layout_marginRight="@dimen/dp16"
+        android:lineSpacingMultiplier="1.2"
+        android:text="@string/message_code_tip"
+        android:textColor="@color/black_222"
+        android:textSize="@dimen/sp20"
+         />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp44"
+        android:layout_marginLeft="@dimen/dp55"
+        android:layout_marginRight="@dimen/dp55"
+        android:gravity="center_horizontal">
+
+        <cloud.antelope.lingmou.mvp.ui.widget.InterceptableEditText
+            android:id="@+id/et_1"
+            android:layout_width="@dimen/dp48"
+            android:layout_height="@dimen/dp56"
+            android:layout_marginRight="@dimen/dp24"
+            android:background="@drawable/bg_msg_code"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textCursorDrawable="@drawable/edittext_cursor"
+            android:textColor="@color/black_222"
+            android:textSize="@dimen/sp32" />
+
+        <cloud.antelope.lingmou.mvp.ui.widget.InterceptableEditText
+            android:id="@+id/et_2"
+            android:layout_width="@dimen/dp48"
+            android:layout_height="@dimen/dp56"
+            android:layout_marginRight="@dimen/dp24"
+            android:background="@drawable/bg_msg_code"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textCursorDrawable="@drawable/edittext_cursor"
+            android:textColor="@color/black_222"
+            android:textSize="@dimen/sp32" />
+
+        <cloud.antelope.lingmou.mvp.ui.widget.InterceptableEditText
+            android:id="@+id/et_3"
+            android:layout_width="@dimen/dp48"
+            android:layout_height="@dimen/dp56"
+            android:layout_marginRight="@dimen/dp24"
+            android:background="@drawable/bg_msg_code"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textCursorDrawable="@drawable/edittext_cursor"
+            android:textColor="@color/black_222"
+            android:textSize="@dimen/sp32" />
+
+        <cloud.antelope.lingmou.mvp.ui.widget.InterceptableEditText
+            android:id="@+id/et_4"
+            android:layout_width="@dimen/dp48"
+            android:layout_height="@dimen/dp56"
+            android:background="@drawable/bg_msg_code"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textCursorDrawable="@drawable/edittext_cursor"
+            android:textColor="@color/black_222"
+            android:textSize="@dimen/sp32" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_send_code"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp48"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp16"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="@string/send_msg_code_again"
+        android:textColor="@color/selector_send_code"
+        android:textSize="@dimen/sp14" />
+</LinearLayout>

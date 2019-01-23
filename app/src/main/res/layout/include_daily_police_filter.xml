@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_filter_fl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="end"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dp50">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dp16"
+            android:paddingTop="@dimen/dp16"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/alarm_range"
+                android:layout_marginLeft="@dimen/dp16"
+                android:layout_marginRight="@dimen/dp16"
+                android:textColor="@color/gray_9e9e9e"
+                android:textSize="@dimen/sp12" />
+
+            <RadioGroup
+                android:id="@+id/range_radio_group"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/dp16"
+                android:layout_marginRight="@dimen/dp16"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginTop="@dimen/dp8"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/range_all_rb"
+                    style="@style/style_alarm_filter_rb"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="true"
+                    android:text="@string/all" />
+
+                <RadioButton
+                    android:id="@+id/range_collect_rb"
+                    style="@style/style_alarm_filter_rb"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp16"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:text="@string/collect" />
+
+                <View
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp16"
+                    android:layout_weight="1" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp16"
+                android:layout_marginLeft="@dimen/dp16"
+                android:layout_marginRight="@dimen/dp16"
+                android:text="@string/alarm_type"
+                android:textColor="@color/gray_9e9e9e"
+                android:textSize="@dimen/sp12" />
+
+            <!--<RadioGroup
+                android:id="@+id/type_radio_group_one"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginTop="@dimen/dp8"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/type_all_rb"
+                    style="@style/style_alarm_filter_rb"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="true"
+                    android:text="@string/all" />
+
+
+                <RadioButton
+                    android:id="@+id/type_keyperson_rb"
+                    style="@style/style_alarm_filter_rb"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp16"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:text="@string/person_tracking" />
+
+                <RadioButton
+                    android:id="@+id/type_control_rb"
+                    style="@style/style_alarm_filter_rb"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp16"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:text="@string/control_key_person"/>
+                <RadioButton
+                    android:id="@+id/type_outside_rb"
+                    style="@style/style_alarm_filter_rb"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp16"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:text="@string/outside_person"/>
+                <RadioButton
+                    android:id="@+id/type_suite_rb"
+                    style="@style/style_alarm_filter_rb"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp16"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:text="@string/private_network_suite"/>
+            </RadioGroup>-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp16"
+                android:text="@string/alarm_state"
+                android:layout_marginLeft="@dimen/dp16"
+                android:layout_marginRight="@dimen/dp16"
+                android:textColor="@color/gray_9e9e9e"
+                android:textSize="@dimen/sp12" />
+
+            <RadioGroup
+                android:id="@+id/state_radio_group_one"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginTop="@dimen/dp8"
+                android:layout_marginLeft="@dimen/dp16"
+                android:layout_marginRight="@dimen/dp16"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/state_all_rb"
+                    style="@style/style_alarm_filter_rb"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="true"
+                    android:text="@string/all" />
+
+                <RadioButton
+                    android:id="@+id/state_undo_rb"
+                    style="@style/style_alarm_filter_rb"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp16"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/undo_alarm" />
+
+                <RadioButton
+                    android:id="@+id/state_valid_rb"
+                    style="@style/style_alarm_filter_rb"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp16"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:text="@string/valid" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/state_radio_group_two"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginLeft="@dimen/dp16"
+                android:layout_marginRight="@dimen/dp16"
+                android:layout_marginTop="@dimen/dp16"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/state_invalid_rb"
+                    style="@style/style_alarm_filter_rb"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:text="@string/invalid" />
+
+                <View
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp16"
+                    android:layout_weight="1" />
+
+                <View
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp16"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp16"
+                android:text="@string/alarm_time"
+                android:layout_marginLeft="@dimen/dp16"
+                android:layout_marginRight="@dimen/dp16"
+                android:textColor="@color/gray_9e9e9e"
+                android:textSize="@dimen/sp12" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp64"
+                android:layout_marginLeft="@dimen/dp16"
+                android:layout_marginRight="@dimen/dp16"
+                android:layout_marginTop="@dimen/dp9"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/alarm_time_start_tv"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/dp16"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_rect_corner_5_f7f7f7"
+                    android:gravity="center"
+                    android:lineSpacingExtra="@dimen/dp8"
+                    android:textSize="@dimen/sp12" />
+
+                <TextView
+                    android:id="@+id/alarm_time_end_tv"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_rect_corner_5_f7f7f7"
+                    android:gravity="center"
+                    android:lineSpacingExtra="@dimen/dp8"
+                    android:textSize="@dimen/sp12" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/reset_tv"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="@string/reset"
+            android:textColor="@color/yellow_ff8f00"
+            android:textSize="@dimen/sp16" />
+
+        <TextView
+            android:id="@+id/save_tv"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/yellow_ffa000"
+            android:gravity="center"
+            android:text="@string/confirm"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp16" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp4"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/dp50"
+        android:background="@drawable/actionbar_shadow_up" />
+
+
+</FrameLayout>
